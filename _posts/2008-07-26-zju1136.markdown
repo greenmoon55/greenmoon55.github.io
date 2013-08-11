@@ -1,0 +1,127 @@
+---
+author: admin
+comments: true
+date: 2008-07-26 04:48:52+00:00
+layout: post
+slug: zju1136
+title: Zju1136 Multiple
+wordpress_id: 72
+categories:
+- Programming
+tags:
+- BFS
+---
+
+http://acm.zju.edu.cn/show_problem.php?pid=1136
+
+
+> http://www.jlyzoi.cn/dispbbs.asp?BoardID=8&id;=64
+给定除数n和允许使用的数字个数m，然后求出用该m个数字组成的n的倍数的最小那个数是多少。如果不能输出0。
+
+
+
+BFS+余数相同的不用处理（这个叫同余？）
+MS[这里](http://acm.zjnu.cn/bbs/showt.asp?boardid=2&id=432 )有测试数据，不过：
+
+
+> 
+http://acm.pku.edu.cn/JudgeOnline/problem?id=1465
+大家去poj交一下。2、3楼交上去都是WA，只有4楼的AC了。
+zoj上数据比较弱，我的在zoj上AC了，但是在poj上却WA。
+目前已经知道程序有问题，但还不知道怎么改，还没看楼的，现在去看。
+答案长度可能超过256，所以第一个不对，不能用字符串存。参照第二个做成procedure即可。
+例：
+4999
+1
+1
+答案为357个1
+
+
+注意问题：不能用字符串存答案，而要存新加上的数，然后递归输出，因为有的答案超过256位，而s:=s+'1'是不会给错误提示的，一直是256位。
+<!-- more -->
+晕，串行了，点上面的view plain看吧。
+
+```pascal 
+
+program zju1136;
+type
+    bfs=record
+        a:shortint;//新增的数
+        n,pre:integer;//n是余数，pre是上一位
+        end;
+var
+    n,m,temp:longint;
+    i,j,l,r,t:longint;
+    ans:array[0..5000] of bfs;//主数组
+    find:array[0..4999] of boolean;
+    num:array[1..10] of longint;//最开始的数
+    done:boolean;//找到答案
+procedure print(i:longint);
+begin
+	if ans[i].pre&amp;amp;amp;amp;amp;gt;0 then print(ans[i].pre);
+	write(ans[i].a);
+end;
+begin
+    assign(input,'dongjin.in');
+    assign(output,'dongjin.txt');
+    reset(input);
+    rewrite(output);
+    while not eof do
+    begin
+        fillchar(find,sizeof(find),false);
+        fillchar(ans,sizeof(ans),0);
+		fillchar(num,sizeof(num),0);
+        done:=false;
+        readln(n);
+        readln(m);
+        for i:=1 to m do readln(num[i]);
+        readln;
+        for i:=1 to m-1 do//排序
+        for j:=i+1 to m do
+        if num[i]&amp;amp;amp;amp;amp;gt;num[j] then
+        begin
+                t:=num[i];
+                num[i]:=num[j];
+                num[j]:=t;
+        end;
+        if n=0 then//处理n=0情况
+        begin
+            writeln(0);
+            continue;
+        end;
+        l:=0;
+        r:=0;
+        while l&amp;amp;amp;amp;amp;lt;=r do
+        begin
+            for i:=1 to m do
+            begin
+                temp:=(ans[l].n*10+num[i]);
+                if (temp=0) then continue;
+                temp:=temp mod n;
+                if not find[temp] then
+                begin
+                    inc(r);
+                    ans[r].n:=temp mod n;
+                    ans[r].a:=num[i];
+					ans[r].pre:=l;
+                    find[ans[r].n]:=true;
+                    if (find[0]) and (l&amp;amp;amp;amp;amp;gt;0) then
+                    begin
+                        done:=true;
+                        print(r);
+						writeln;
+                        break;
+                    end;
+                end;
+            end;
+            if done then break else inc(l);
+        end;
+        if not done then writeln(0);
+    end;
+    close(input);
+    close(output);
+end.
+
+```
+
+

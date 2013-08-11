@@ -1,0 +1,249 @@
+---
+author: admin
+comments: true
+date: 2012-02-02 01:52:27+00:00
+layout: post
+slug: hdu4121-xiangqi
+title: HDU4121 Xiangqi
+wordpress_id: 332
+categories:
+- Programming
+tags:
+- ACM
+---
+
+只有四种棋子：将、车、马、炮，黑方只有一个将，现在被红方将，红方有2至7个棋子，判断黑方是否被将死。
+
+考虑黑将的四个行动方向，判断每个位置是否被将死即可。
+
+将：判断两个将之间是否有棋子
+车：同上
+马：八个方向，容易出错，详见代码
+炮：将与炮之间是否只有一个棋子
+
+//不考虑黑方飞将也能过，不知道到底该不该考虑。。
+
+
+```cpp 
+
+#include 
+#include 
+#include 
+#include 
+using namespace std;
+struct point
+{
+    int x,y;
+}g[10], r[10], h[10], c[10]; //bg:black general
+int gcount, rcount, hcount, ccount;
+const int dx[] = {-1, 0, 1, 0};
+const int dy[] = {0, 1, 0, -1};
+
+const int hx[] = {-2, -2, -1, 1, 2, 2, 1, -1};
+const int hy[] = {1, -1, 2, 2, 1, -1, -2, -2};
+bool map[10][10]; //红旗子
+
+//将是否在范围内
+bool isValid(int x, int y)
+{
+    return y >= 4 && y <= 6 && x >= 1 && x <= 3;
+}
+
+//[a,y]到[b,y]的棋子个数（不含端点）
+int betweenX(int y, int a, int b)
+{
+    int sum = 0;
+    if (a < b)
+    {
+        for (int i = a + 1; i < b; i++)
+        {
+            if (map[i][y]) sum++;
+        }
+    }
+    else
+    {
+        for (int i = b + 1; i < a; i++)
+        {
+            if (map[i][y]) sum++;
+        }
+    }
+    return sum;
+}
+
+//[x,a]到[x,b]的棋子个数（不含端点）
+int betweenY(int x, int a, int b)
+{
+    int sum = 0;
+    if (a < b)
+    {
+        for (int i = a + 1; i < b; i++)
+        {
+            if (map[x][i]) sum++;
+        }
+    }
+    else
+    {
+        for (int i = b + 1; i < a; i++)
+        {
+            if (map[x][i]) sum++;
+        }
+    }
+    return sum;
+}
+
+//将的新位置newbg是否会被红方飞将
+bool isSafeGeneral(point const &newbg;)
+{
+    //其实只有一个嘛
+    for (int i = 0; i < gcount; i++)
+    {
+        if (newbg.y == g[i].y)
+        {
+            if (betweenX(newbg.y, newbg.x, g[i].x) == 0) return false;
+        }
+    }
+    return true;
+}
+
+//是否会被车吃（中间没有其他棋子）
+bool isSafeChariot(point const &newbg;)
+{
+    for (int i = 0; i < rcount; i++)
+    {
+        if (newbg.x == r[i].x && newbg.y == r[i].y) continue; //这就是吃掉了
+        if (newbg.x == r[i].x)
+        {
+            if (betweenY(newbg.x, newbg.y, r[i].y) == 0) return false;
+        }
+        if (newbg.y == r[i].y)
+        {
+            if (betweenX(newbg.y, newbg.x, r[i].x) == 0) return false;
+        }
+    }
+    return true;
+}
+
+//是否会被炮打（中间棋子为1）
+bool isSafeCannon(point const &newbg;)
+{
+    for (int i = 0; i < ccount; i++)
+    {
+        if (newbg.x == c[i].x && newbg.y == c[i].y) continue; //这就是吃掉了
+        if (newbg.x == c[i].x)
+        {
+            if (betweenY(newbg.x, newbg.y, c[i].y) == 1) return false;
+        }
+        if (newbg.y == c[i].y)
+        {
+            if (betweenX(newbg.y, newbg.x, c[i].x) == 1) return false;
+        }
+    }
+    return true;
+}
+
+bool isSafeHorse(point const &newbg;)
+{
+    int newx, newy;
+    for (int i = 0; i < hcount; i++)
+    {
+        for (int j = 0; j < 8; j++)
+        {
+            newx = h[i].x + dx[j / 2];
+            newy = h[i].y + dy[j / 2];
+            if (map[newx][newy]) continue; //别马腿
+            newx = h[i].x + hx[j];
+            newy = h[i].y + hy[j];
+            if (newx == newbg.x && newy == newbg.y) return false;
+        }
+    }
+    return true;
+}
+
+//如果不被将，返回真
+bool check(point const &newbg;)
+{
+    return isSafeGeneral(newbg) && isSafeCannon(newbg) && isSafeHorse(newbg) && isSafeChariot(newbg);
+}
+
+int main()
+{
+    int n;
+    char ch;
+    int a, b;
+    while (true)
+    {
+        point bg, newbg; //bg:black general
+        gcount = 0, rcount = 0, hcount = 0, ccount = 0;
+        memset(map, 0, sizeof(map));
+        bool checkmate = true;
+        cin >> n >> bg.x >> bg.y;
+        if (!n) break;
+        for (int i = 0; i < n; i++)
+        {
+            cin >> ch >> a >> b;
+            map[a][b] = true;
+            if (ch == 'G')
+            {
+                g[gcount].x = a;
+                g[gcount].y = b;
+                gcount++;
+            } else
+            if (ch == 'R')
+            {
+                r[rcount].x = a;
+                r[rcount].y = b;
+                rcount++;
+            } else
+            if (ch == 'H')
+            {
+                h[hcount].x = a;
+                h[hcount].y = b;
+                hcount++;
+            } else
+            if (ch == 'C')
+            {
+                c[ccount].x = a;
+                c[ccount].y = b;
+                ccount++;
+            }
+        }
+        //不考虑飞将也能过
+        /*
+        if (!isSafeGeneral(bg))
+        {
+            puts("NO");
+            continue;
+        }
+        */
+        //将的四个方向
+        for (int i = 0; i < 4; i++)
+        {
+            newbg.x = bg.x + dx[i];
+            newbg.y = bg.y + dy[i];
+            if (!isValid(newbg.x, newbg.y)) continue;
+            if (check(newbg))
+            {
+                checkmate = false;
+                break;
+            }
+        }
+        if (checkmate) puts("YES");
+        else puts("NO");
+    }
+    return 0;
+}
+
+```
+
+
+敲代码的时候曾经把g、r、h、c数组弄混过。。以后这种题还是用拼音算了。
+测了样例和马的情况就交了。
+第一次WA错在puts里面写了\n...
+又测了几个数据都正常，然后看了一遍代码，还是没发现错误。
+试了黑棋直接飞将，还是WA，看别人题解突然想到我还考虑将走斜线的情况了。。
+最后，似乎是否考虑黑棋直接飞将都可以。
+
+这题我没着急慢慢写的，如果现场的话至少两小时吧，很有可能有个小错找不出来，不确定到底能不能写好。
+还是边写边想，还好没犯大错误，betweenX等是写了很多之后才想到单独写个函数的。。
+
+只有两周了，时间好紧张= =

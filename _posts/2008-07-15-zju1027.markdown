@@ -1,0 +1,168 @@
+---
+author: admin
+comments: true
+date: 2008-07-15 07:24:09+00:00
+layout: post
+slug: zju1027
+title: Zju1027
+wordpress_id: 54
+categories:
+- Programming
+tags:
+- DP
+- ZOJ
+---
+
+题目翻译（转自[http://www.jlyzoi.cn](http://www.jlyzoi.cn)，估计来源是衡阳市八中论坛，但是论坛暂时打不开）：
+
+
+> 众所周知，人类基因可以被简单认为是一个字符串，包含四种分别用A,C,T,G表示的核苷酸。生物学家对鉴别人类基因核确定他们的功能很感兴趣。因 为这对诊断人类疾病和开发新药很有用。 人类基因可以用一堆特别的快速的试验来鉴别，而且通常要借助电脑的帮助一旦基因序列测定了，下一步就可以确定它的功能了。生物学家确定一个新鉴定了的基因 的功能的方法之一是在在基因数据库里和其他基因对照。要搜索的数据库里储存了很多的基因和它们的功能－－很多研究人员提交了他们的研究基因和功能到数据 库，而数据库是在互联网上公开的。
+
+数据库会返回一堆最相近基因。生物学家们假设类似的基因表示类似的功能。所以新基因的功能也包含在列表里的基因里。所以严格确定最相近的一个对生物试验非常必要。
+
+你的任务是写一个程序来按一下规则比较两个基因和决定他们的相似程度。给出两个基因 AGTGATG 和 GTTAG，他们有多相似呢？一个测量两个基因相似程度的方法就叫做alignment。在alignment里, 如果必要是可以在基因的适当位置插进空格以令他们的长度相等。例如，一个空格插进了AGTGATG以后就得到AGTGAT-G，三个空格插进了GTTAG 就得到–GT--TAG。空格用减号(-)表示。现在两个串的长度就相等了。现在排在一齐就成了：
+
+AGTGAT-G
+-GT--TAG
+<!-- more -->
+
+在这个alignment里，有四个基因是相配的：第二位的G，第三位的 T，第六位的T，和第八位的G。每对排列排列的字母用一下的矩阵分配了不同的分值。* 表示空格对空格是不允许的。所以以上这个alignment的分值是(-3)+5+5+(-2)+(-3)+5+(-3)+5=9 。
+
+当然，其他alignments也是有可能的。一下有另一种排列 (不同数目的空格插进不同的位置)：
+
+AGTGATG
+-GTTA-G
+
+这个alignment 给出了的分值是 (-3)+5+5+(-2)+5+(-1) +5=14。 所以这一个比前一个要好。没有其他的alignment有更高的分值了，所以说这两个基因的相似程度是14。
+
+输入格式
+
+输入数据有T组测试数据。测试数据的数目 (T)在输入的第一行给出。每组测试数据有两行：每行有一个表示基因长度的整数和一个基因序列。每个基因的长度都不超过100.。
+输出格式
+
+输出只要输出每组测试数据的相似程度，每组一行。
+Sample Input
+
+2
+7 AGTGATG
+5 GTTAG
+7 AGCTATT
+9 AGCTTTAAA
+Output for the Sample Input
+
+14
+21
+
+
+从来没做过这种DP题，推荐看下Eruca的[分析](http://eruca.blog.hexun.com/1721716_d.html)：
+
+
+> 设两个DNA序列分别为s1，s2，长度分别为len1，len2，score为分值表。f[i,j]表示子串s1[1..i]和s2[1..j]的分值。考虑一个f[i,j]，我们有：
+1.s1取第i个字母，s2取“-”：f[i-1,j] + score[s1[i],'-']
+2.s1取“-”，s2取第j个字母：f[i,j-1] + score['-',s2[j]]
+3.s1取第i个字母，s2取第j个字母：f[i-1,j-1] + score[s1[i],s2[j]]
+即f[i,j] = max(f[i-1,j] + score[s1[i],'-'], f[i,j-1] + score['-',s2[j]], f[i-1,j-1] + score[s1[i],s2[j]]);
+
+
+f[0,0]=0 f[0,*]和f[*,0]都应该用字母与'-'相对。这样，可以用两个一维数组存储，互相导。
+
+
+
+
+
+
+
+
+
+
+
+2976417
+
+
+2008-07-14 10:41:39
+
+
+Accepted
+
+
+[1027](http://acm.zju.edu.cn/show_problem.php?pid=1027)
+
+
+FPC
+
+
+00:00.00
+
+
+404K
+
+
+[greenmoon55](http://acm.zju.edu.cn/user_status.php?user=greenmoon55)
+
+
+
+
+下面是程序：
+
+```pascal 
+
+program zju1027;
+const
+    match:array[1..5,1..5] of longint=
+        ((5,-1,-2,-1,-3),
+        (-1,5,-3,-2,-4),
+        (-2,-3,5,-2,-2),
+        (-1,-2,-2,5,-1),
+        (-3,-4,-2,-1,999));
+var
+    i,j,k,n:longint;
+    s1,s2:string;
+    l1,l2:longint;
+    f1,f2:array[0..100] of longint;
+function max(a,b,c:longint):longint;
+begin
+    if (a>=b) and (a>=c) then exit(a);
+    if (b>=a) and (b>=c) then exit(b);
+    if (c>=a) and (c>=b) then exit(c);
+end;
+function c(ch:char):longint;
+begin
+    case ch of
+    'A':exit(1);
+    'C':exit(2);
+    'G':exit(3);
+    'T':exit(4);
+    '-':exit(5);
+    end;
+end;
+begin
+    assign(input,'in.txt');reset(input);
+    assign(output,'out.txt');rewrite(output);
+    readln(n);
+    for i:=1 to n do
+    begin
+        read(l1);
+        readln(s1);
+        delete(s1,1,1);
+        read(l2);
+        readln(s2);
+        delete(s2,1,1);
+        f1[0]:=0;
+        for j:=1 to l2 do f1[j]:=f1[j-1]+match[5,c(s2[j])];
+        for j:=1 to l1 do
+        begin
+            f2[0]:=f1[0]+match[c(s1[j]),5];
+            for k:=1 to l2 do
+            begin
+                f2[k]:=max(f1[k-1]+match[c(s1[j]),c(s2[k])],f1[k]+match[c(s1[j]),5],f2[k-1]+match[5,c(s2[k])]);
+            end;
+            f1:=f2;
+        end;
+        writeln(f2[l2]);
+    end;
+    close(input);
+    close(output);
+end.
+
+```
+

@@ -1,0 +1,440 @@
+---
+author: admin
+comments: true
+date: 2011-10-13 14:24:24+00:00
+layout: post
+slug: icpc-2011
+title: ICPC 2011
+wordpress_id: 318
+categories:
+- Programming
+tags:
+- ACM
+---
+
+随便写个标题吧。。算不算标题党？ 整理一下最近写的题目。
+
+**大连网络赛**：
+**To Miss Our Children Time**
+背包问题，排个序就行了，题目描述不清。。
+
+**Find Metal Mineral**
+树形动归，f[x][j]表示以x为根的树，前i个子树放j个机器人不回来的最小值，DFS的感觉。f[x][0]表示放一个再出来。做的第一个树形动归，参照别人的代码，很巧妙的写法嘛。刚才看题目忘了具体怎么写了= =
+
+```cpp 
+
+void work(int x,int prev)
+{
+    for (int i=head[x];i!=-1;i=edge[i].next)
+    {
+        if (edge[i].y==prev) continue;
+        work(edge[i].y,x);
+        for (int j=k;j>=0;j--)
+        {
+            f[x][j]+=f[edge[i].y][0]+edge[i].w*2;
+            for (int l=0;l<j;l++)
+            f[x][j]=min(f[x][j],f[x][l]+edge[i].w*(j-l)+f[edge[i].y][j-l]);
+        }
+    }
+}
+
+```
+
+PS：原来这个叫做分组背包= =
+
+**The Frog's Games**
+比赛的时候以为是DP，结果就是个二分...
+
+**The kth great number**
+最简单的办法就是弄一个最小堆，堆顶就是答案，priority_queue用起来很爽。
+
+```cpp 
+
+priority_queue <int, vector, greater > heap;
+
+if (heap.size()<k) heap.push(temp);
+else if (temp>heap.top())
+    {
+        heap.pop();
+        heap.push(temp);
+    }
+
+```
+
+还可以写个treap..treap的删除还不会写= =
+
+**Dave**
+注意正方形的顶点不一定是题中的点。
+把点分别按x和y排序，四条线扫描，写得比较乱= =
+
+**The 36th ACM/ICPC Asia Regional Shanghai Site —— Warmup**
+Working in Beijing
+Parsing URL
+两道水题，第一题题目说明不清楚= = 做做调节心情
+
+**上海网络赛**
+**24 Puzzle**
+如果空位在角上则挪到中间的正方形里，然后比较8个角是否相同，相同才有可能有解。对于4*4，左右交换不改变逆序对，上下交换时逆序数的奇偶性改变一次(0-3,3-0,1-2,2-1)。
+[http://zhyu.me/acm/hdu-4021.html](http://zhyu.me/acm/hdu-4021.html)
+觉得这个证明不完备，没想好怎么证。
+
+**Bombing**
+multiset真的很爽...
+
+```cpp 
+
+typedef map<int, multiset > dict;
+
+void work(dict &a;, dict &b;, int &x;)  //delete a(x) from b
+{
+    printf("%d\n",a[x].size());
+    for (multiset::iterator iter=a[x].begin();iter!=a[x].end();iter++)
+    {
+        b[*iter].erase(x);
+    }
+    a[x].clear();
+}
+
+int main()
+{
+    int n,m,x,y;
+    while (scanf("%d%d",&n;,&m;)!=EOF)
+    {
+        if (n==0 && m==0) break;
+        dict a,b;
+        for (int i=0;i<n;i++)
+        {
+            scanf("%d%d",&x;,&y;);
+            a[x].insert(y);
+            b[y].insert(x);
+        }
+        for (int i=0;i<m;i++)
+        {
+            scanf("%d%d",&x;,&y;);
+            if (x==0) work(a,b,y);
+            else work(b,a,y);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+```
+
+
+**Game**
+比较简单的博弈问题，比赛的时候没静下心来想。
+分组讨论，注意一个细节，9、10如果竖着的放好了，对方就不用抢这种了。
+
+**成都网络赛**
+**Graph**
+给最短边求原图，原来可以这样写
+
+```cpp 
+
+void work(const int n)
+{
+    for (int k=0;k<n;k++)
+    for (int i=0;i<n;i++)
+    for (int j=0;j<n;j++)
+    {
+        if (i==j || i==k || k==j) continue;
+        if ((!visited[i][j]) && map[i][k]+map[k][j]==map[i][j])
+        {
+            ++c;
+            visited[i][j]=true;
+        }
+    }
+}
+
+```
+
+
+```cpp 
+
+printf("%d\n",n*(n-1)-c);
+
+```
+
+
+**Rolling Hongshu**
+物理题，考虑顶点和所有bitter potato。题目描述挺好玩...
+
+**The Social Network**
+第一次用map。
+
+```cpp 
+
+map<string,int> num;
+
+```
+
+
+读入：
+
+```cpp 
+
+cin>>s1>>s2;
+if (num.count(s1)) n1=num.find(s1)->second;
+else
+    {
+        num.insert(make_pair(s1, ++count));
+        n1=count;
+        sn[n1]=s1;
+    }
+if (num.count(s2)) n2=num.find(s2)->second;
+else
+    {
+        num.insert(make_pair(s2, ++count));
+        n2=count;
+        sn[n2]=s2;
+    }
+f[n1][++f[n1][0]]=n2;//f[n1]存n1的朋友们
+f[n2][++f[n2][0]]=n1;
+
+```
+
+接下来就慢慢弄吧...
+
+**北京网络赛**
+**Eliminate Witches!**
+模拟，递归处理，WA好几次= =
+不过这个是我在今年网络赛时作出的第一道题= =
+
+**Panda**
+树状数组。a[i]表示以i开头的是不是wbw。自己没想到这种方法。
+
+```cpp 
+
+if (s[i]=='w' && s[i+1]=='b' && s[i+2]=='w') add(i,1);
+
+```
+
+
+**Tourism Planning**
+第一个状态压缩DP，把某人去不去用二进制表示。
+f[15][1030];//f[i][j]前i个景点，第j个状态的最大值
+预处理当前状态能由哪些状态得到，如果不预处理HDU可以很快AC，BOJ会TLE= =
+
+**wolf5x**
+概率DP。
+比赛时就想对了方法，读题不认真，以为第一步左右概率相同呢。
+赛后写好，发现还是看错题了，以为是求停止位置，原来是求步数的期望，可以直接把所有状态的概率加起来！
+
+```cpp 
+
+int main()
+{
+    int t;
+    int n,a,b;
+    int i,j;
+    double ans;
+    double p[2010][4];
+    double f[2010][4];
+    double temp1,temp2,temp3;
+    scanf("%d",&t;);
+    while (t--)
+    {
+        scanf("%d%d%d",&n;,&a;,&b;);
+        ans=0;
+        for (i=1;i<=n;i++) scanf("%lf%lf%lf%lf",&p;[i][0],&p;[i][1],&p;[i][2],&p;[i][3]);
+        memset(f,0,sizeof(f));
+        temp1=1;
+        for (i=a;i<=b;i++)
+        {
+            if (i>n)
+            {
+                ans+=temp1;
+                break;
+            }
+            for (j=1;j<=3;j++) f[i][j]=temp1*p[i][j];
+            temp1*=p[i][0];
+        }
+        for (i=a;i<=n;i++)
+        {
+            temp1=temp2=temp3=1;
+            for (j=i+a;j<=i+b;j++)
+            {
+                if (j>n)
+                {
+                    ans+=f[i][1]*temp1+f[i][2]*temp2+f[i][3]*temp3;
+                    break;
+                }
+                else
+                {
+                    f[j][1]+=(f[i][2]*temp2+f[i][3]*temp3)*p[j][1]; //表示以这种状态踩在j
+                    f[j][2]+=(f[i][1]*temp1+f[i][3]*temp3)*p[j][2];
+                    f[j][3]+=(f[i][1]*temp1+f[i][2]*temp2+f[i][3]*temp3)*p[j][3];
+                    temp1*=p[j][0]+p[j][1];  //tempi表示f[prev][i]不能走的概率
+                    temp2*=p[j][0]+p[j][2];
+                    temp3*=p[j][0];
+                }
+            }
+            ans+=f[i][1]+f[i][2]+f[i][3];
+        }
+        printf("%.8lf\n",ans);
+    }
+    return 0;
+}
+
+```
+
+**大连现场赛**
+**The Last Puzzle**
+对于任意一段，都是从任意一端开始到中间，因为如果从中间开始，还是要先到两端再到最终节点。想通了这个就很好写了。
+f[i][j][k]表示从i到j这一段，k表示从左或从右开始，所需的最短时间。不可能则记为-1。
+
+```cpp 
+
+/*
+    f[i][j][1] 表示先按右端点的所需时间
+    f[i][j][0] 表示先按左端点的所需时间
+    r[i][j][0] (i,j)区间先左端点的话，(i+1,j)选哪个端点
+    r[i][j][1] (i,j)区间先右端点的话，(i,j-1)选哪个端点
+*/
+int t[210],d[210],f[210][210][2];
+int r[210][210][2];
+
+void print(int a, int b, int c)
+{
+    if (b-a==1)
+    {
+        if (c) printf("%d %d\n",b,a);
+        else printf("%d %d\n",a,b);
+        return;
+    }
+    if (c)
+    {
+        printf("%d ",b);
+        print(a,b-1,r[a][b][c]);
+    }
+    else
+    {
+        printf("%d ",a);
+        print(a+1,b,r[a][b][c]);
+    }
+}
+int main()
+{
+    freopen("zoj3541.txt","r",stdin);
+    int n,i,j,k;
+    while (scanf("%d",&n;)!=EOF)
+    {
+        memset(f,-1,sizeof(f));
+        for (i=1;i<=n;i++) scanf("%d",&t;[i]);
+        for (i=1;i<=n;i++) scanf("%d",&d;[i]);
+
+        // 相邻的
+        for (i=1;i<n;i++)
+        {
+            f[i][i+1][1]=f[i][i+1][0]=d[i+1]-d[i];
+            if (f[i][i+1][1]>=t[i+1]) f[i][i+1][1]=-1;
+            if (f[i][i+1][0]>=t[i]) f[i][i+1][0]=-1;
+        }
+
+        for (k=2;k<n;k++)
+        {
+            for (i=1;i<=n-k;i++)
+            {
+                j=i+k;
+
+                // f[i][j][0]
+                if (f[i+1][j][0]!=-1)
+                {
+                    f[i][j][0]=f[i+1][j][0]+d[i+1]-d[i];
+                    r[i][j][0]=0;
+                }
+                if (f[i+1][j][1]!=-1)
+                    if (f[i][j][0]!=-1)
+                    {
+                        if (f[i][j][0]>f[i+1][j][1]+d[j]-d[i])
+                        {
+                            f[i][j][0]=f[i+1][j][1]+d[j]-d[i];
+                            r[i][j][0]=1;
+                        }
+                    }
+                    else
+                    {
+                        f[i][j][0]=f[i+1][j][1]+d[j]-d[i];
+                        r[i][j][0]=1;
+                    }
+
+                if (f[i][j-1][0]!=-1)
+                {
+                    f[i][j][1]=f[i][j-1][0]+d[j]-d[i];
+                    r[i][j][1]=0;
+                }
+                if (f[i][j-1][1]!=-1)
+                    if (f[i][j][1]!=-1)
+                    {
+                        if (f[i][j][1]>f[i][j-1][1]+d[j]-d[j-1])
+                        {
+                            f[i][j][1]=f[i][j-1][1]+d[j]-d[j-1];
+                            r[i][j][1]=1;
+                        }
+                    }
+                    else
+                    {
+                        f[i][j][1]=f[i][j-1][1]+d[j]-d[j-1];
+                        r[i][j][1]=1;
+                    }
+
+                if (f[i][j][0]>=t[i]) f[i][j][0]=-1;
+                if (f[i][j][1]>=t[j]) f[i][j][1]=-1;
+            }
+        }
+        if (f[1][n][0]==-1 && f[1][n][1]==-1) puts("Mission Impossible");
+        else
+            if (f[1][n][0]!=-1) print(1,n,0);
+            else print(1,n,1);
+    }
+    return 0;
+}
+
+
+```
+
+
+**Hexadecimal View**
+水题，不知道可以用 %x 输出...
+
+**Number String**
+f[i][j]存当前所有可能情况，即i=n时只有f[n][1]。表示字符串中第i位是，表中第j个有几种情况。f[i+1]保存的数量比f[i]少一个，因为有一个数字被选走了。
+
+```cpp 
+
+for (i=1;i<=n;i++) f[1][i]=1;
+for (int ii=0;ii<n;ii++)
+{
+    i=ii+2;
+    if (str[ii]=='I')
+    {
+        f[i][1]=f[i-1][1];
+        for (j=2;j<=n-i+1;j++) f[i][j]=(f[i-1][j]+f[i][j-1])%MOD;
+    }
+    else if (str[ii]=='D')
+    {
+        f[i][n-i+1]=f[i-1][n-i+2];
+        for (j=n-i;j>=1;j--) f[i][j]=(f[i-1][j+1]+f[i][j+1])%MOD;
+    }
+    else
+    {
+        sum=0;
+        for (j=1;j<=n-i+2;j++) sum=(sum+f[i-1][j])%MOD;
+        for (j=1;j<=n-i+1;j++) f[i][j]=sum;
+    }
+}
+printf("%d\n",f[n][1]);
+
+```
+
+
+**福州网络赛**
+**SanguoSHA**
+当时不爽，写这题写了好久= = 最后写好了觉得会WA，于是没交，回宿舍交了发现过了。
+STL里居然有全排列... [next_permutation](http://www.cplusplus.com/reference/algorithm/next_permutation/) 和 [prev_permutation](http://www.cplusplus.com/reference/algorithm/prev_permutation/)。
+
+===
+仔细想想有些题还是可以做的，并不是不会算法，而是想不到。另外数学太烂了。
+
+大二，作业没大一多了，更加觉得时间不够用。平时训练做题效率很低。还有好多想学的东西呢。

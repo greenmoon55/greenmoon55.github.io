@@ -1,0 +1,78 @@
+---
+author: admin
+comments: true
+date: 2012-04-19 16:10:30+00:00
+layout: post
+slug: ustc1300-big-grid
+title: USTC1300 Big grid
+wordpress_id: 357
+categories:
+- Programming
+tags:
+- DP
+---
+
+[USTC1300](http://acm.ustc.edu.cn/ustcoj/problem.php?id=1300)
+
+DP，dp[i][SAME 或 DIFF] 表示格子[0][i]和[1][i-1]相同颜色或不同颜色有多少种情况。然后就很好写了。
+
+数学解法不会= =
+
+
+```cpp 
+
+#include 
+#include 
+#include 
+using namespace std;
+const int SAME = 1;
+const int DIFF = 0;
+long long dp[10010][2];
+int main()
+{
+    int t,n,m,k;
+    long long ans;
+    cin >> t;
+    while (t--)
+    {
+        memset(dp, 0, sizeof(dp));
+        scanf("%d%d%d", &n;, &m;, &k;);
+        if (n == 1)
+        {
+            ans = k;
+            for (int i = 1; i < m; i++)
+            {
+                ans *= k - 1;
+                ans %= 1000000007;
+            }
+        }
+        else
+        {
+            if (m == 1)
+            {
+                ans = k*(k - 1);
+                ans %= 1000000007;
+            }
+            else
+            {
+                dp[1][SAME] = k*(k - 1);
+                dp[1][SAME] %= 1000000007;
+                dp[1][DIFF] = k*(k - 1)*(k - 2);
+                dp[1][DIFF] %= 1000000007;
+                for (int i = 2; i < m; i++)
+                {
+                    dp[i][SAME] = dp[i - 1][DIFF]*(k - 2) + dp[i - 1][SAME]*(k - 1);
+                    dp[i][SAME] %= 1000000007;
+                    dp[i][DIFF] = dp[i - 1][SAME]*(k - 1)*(k - 2) + dp[i - 1][DIFF]*(k - 2)*(k - 2);
+                    dp[i][DIFF] %= 1000000007;
+                }
+                ans = (dp[m - 1][SAME]*(k - 1) + dp[m - 1][DIFF]*(k - 2)) % 1000000007;
+            }
+        }
+        cout << ans << endl;
+    }
+    return 0;
+}
+
+```
+

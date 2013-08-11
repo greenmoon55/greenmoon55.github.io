@@ -1,0 +1,18 @@
+---
+author: admin
+comments: true
+date: 2008-06-14 15:24:21+00:00
+layout: post
+slug: jilin2008oi
+title: 吉林2008省选题扫描版
+wordpress_id: 51
+categories:
+- Programming
+---
+
+6月14日 12:00-16:00
+下载地址： [http://tinyurl.com/3nvzmj](http://tinyurl.com/3nvzmj)
+
+:)
+
+过程以后有时间再写 :)

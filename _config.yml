@@ -1,0 +1,4 @@
+name: Greenmoon55's Blog
+markdown: redcarpet
+pygments: true
+permalink: /:title

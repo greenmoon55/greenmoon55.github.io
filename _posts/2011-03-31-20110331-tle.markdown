@@ -1,0 +1,101 @@
+---
+author: admin
+comments: true
+date: 2011-03-31 02:57:41+00:00
+layout: post
+slug: 20110331-tle
+title: HDU3560一直TLE
+wordpress_id: 281
+categories:
+- Programming
+tags:
+- ACM
+---
+
+冒个泡。。。这里几个月没更新了吧？= =
+http://acm.hdu.edu.cn/showproblem.php?pid=3560
+是这个题。。一直TLE
+看起来是个简单的并查集题目。。周日刚学的
+昨晚开始写，参照是学长的union函数，今天看了CRLS上这一部分，改了改。
+网上搜了几个程序，看起来和我的都差不多嘛，删删改改交了十几次都是TLE= =
+似乎。。很少遇到这种情况啊。
+
+
+这是**TLE**代码，求助= =
+
+
+```c 
+
+#include 
+#include 
+
+#define maxn 100005
+int father[maxn],rank[maxn]; //father初始化为-1，<del>其实还不太理解rank为什么只在相等的时候加1</del>。懂了！“Maintain rank(x) as an upper bound on the depth of the tree rooted at x. ” 可以google一下 union by rank. 有个PPT
+
+
+int findfather(int a)
+{
+    if (father[a]<0) return a;
+    else
+    {
+        father[a]=findfather(father[a]);
+        return father[a];
+    }
+
+}
+void un (int u, int v)
+{
+    int rx=findfather(u),ry=findfather(v);
+    if (rx!=ry)
+    {
+        if (rank[rx]>rank[ry]) father[ry]=rx;
+        else
+        {
+            father[rx]=ry;
+            if (rank[rx]==rank[ry]) rank[ry]++;
+        }
+    }
+}
+
+int main()
+{
+    int m,n,u,v,ans1,ans2;
+    int i;
+    int degree[maxn],flag[maxn];
+
+    while(scanf("%d%d",&n;,&m;)!=EOF)
+    {
+        memset(father,-1,sizeof(father));
+        memset(degree,0,sizeof(degree));
+        memset(flag,0,sizeof(flag));
+        memset(rank,0,sizeof(rank));
+        ans1=0;
+        ans2=0;
+
+        if (n==0 && m==0) break;
+        for (i=0;i<m;i++)
+        {
+            scanf("%d%d",&u;,&v;);
+            un(u,v);
+            degree[u]++;
+            degree[v]++;
+        }
+        for (i=0;i<n;i++)
+        {
+            if (degree[i]!=2) flag[findfather(i)]=1; //度不为二，则不是环
+        }
+        for (i=0;i<n;i++)
+        {
+            if (father[i]<0) //如果是树根
+            {
+                ans1++;
+                if (!flag[i]) ans2++;
+            }
+        }
+        printf("%d %d\n",ans1,ans2);
+    }
+    return 0;
+}
+
+```
+

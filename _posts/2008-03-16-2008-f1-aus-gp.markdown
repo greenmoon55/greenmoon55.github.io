@@ -1,0 +1,52 @@
+---
+author: admin
+comments: true
+date: 2008-03-16 09:50:12+00:00
+layout: post
+slug: 2008-f1-aus-gp
+title: 2008F1澳大利亚站-真乱啊
+wordpress_id: 25
+categories:
+- F1
+tags:
+- F1
+---
+
+好久没看F1了，昨天在QQ群里才知道本周就是澳大利亚站。看了排位的报道，对法拉利的速度感到失望，毕竟冬季测试时法拉利速度还是很快的。
+
+看的是C5的直播，电视转播界面有新变化，比如在最下方显示暗的Classification（很多种）、显示车手照片、replay动画修改（觉得没以前的好），就是剩10几圈的时候突然什么都消失了（好像错误的提示了SC）。
+
+各车队涂装也没什么大的改变，只是Honda的变的多一些，不像去年看雷诺的车那么不顺眼。
+
+发车MAS就失误了，回去换前翼，结果下一圈又回去加油，真不知道是怎么想的，后来还退赛了。对于把DC撞出去，应该都是MAS的责任，车身还没超过DC就直接撞出去了。 :sad:
+
+Kimi左侧软胎的白线很快就磨平了，第一圈趁乱超了不少，到第8，很不错。但是后来一直被Barrichello挡在后面。等了十多圈才尝试超车，下一圈就成功了，并很快拉开距离，两次安全车也帮了Kimi不少忙。不过Kimi第二次超科瓦莱宁时没刹住车（MAS刚退赛），马上回去加油换胎。回来超新人格洛克(Glock)时左后胎上草了，然后就失控了，不过没什么大碍。后来Glock过弯（好像是12号弯）时上草坪了，但是草坪不平，所以车就报废了。安全车有一次出动，不知怎么了，安全车回pit时，Kimi好像被超了，然后就被落下很远。引擎好像出问题了，声音不太对，后来又一次停在pit入口，第N次了。。。 :oops:
+
+HAM真快啊，很像去年AUS的KIMI，一点没受安全车影响。
+
+还有比较有趣的：
+
+
+
+	
+  1. Barrichello加油时棒棒糖人举牌早了，还没加完油呢！出去还是红灯，先罚停10s，赛后又宣布取消其成绩。
+
+	
+  2. ALO和KOV的争斗：先是ALO乘其不备超过了KOV，KOV在倒数第二圈终于又反超了，不过在发车区直道时被ALO轻松超过，都没到第一弯，明显是KOV有问题。不知道怎么会这样超过去。找到原因了，按了Pit Lane 限速按钮。。。。。 Nothing is impossible   :roll: :shock:  [http://www.eaf1.net/bbs/viewthread.php?tid=46894](http://www.eaf1.net/bbs/viewthread.php?tid=46894)
+
+
+总结：乱得赶上去年加拿大了。难道法拉利还要像去年、前年那样后程发力？
+
+推荐阅读：
+
+
+> 评论：墨尔本上演"大逃杀" 不怕慢就怕坚持不到底 [http://sports.sina.com.cn/f1/2008-03-16/17113535835.shtml](http://sports.sina.com.cn/f1/2008-03-16/17113535835.shtml)
+
+F1新季揭幕站仅七车完赛 汉密尔顿夺冠法拉利零分 [http://sports.sina.com.cn/f1/2008-03-16/14093535652.shtml](http://sports.sina.com.cn/f1/2008-03-16/14093535652.shtml)
+
+Official Results [http://www.formula1.com/results/season/2008/787/](http://www.formula1.com/results/season/2008/787/)
+
+
+下周是马来西亚雪邦(Sepang)，F12006比赛时我最快好像是1:35。第一弯很险啊！
+
+推荐：世界一级方程式锦标赛马来西亚站介绍及回顾[视频]：[http://www.eaf1.net/bbs/viewthread.php?tid=37207](http://www.eaf1.net/bbs/viewthread.php?tid=37207)

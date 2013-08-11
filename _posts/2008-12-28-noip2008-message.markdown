@@ -1,0 +1,68 @@
+---
+author: admin
+comments: true
+date: 2008-12-28 15:45:52+00:00
+layout: post
+slug: noip2008-message
+title: NOIP2008传纸条
+wordpress_id: 121
+categories:
+- Programming
+tags:
+- DP
+- NOIP
+---
+
+原来是一个简单的DP，当时用搜索得50分，现在做DP没清零只得60分。。
+斜着划分阶段，f[i,x1,x2]第i个阶段，x1, x2是两点的横坐标，每点的横纵坐标之和与阶段有关系。根据右下角为(m,n)可判断阶段数。
+
+```pascal 
+
+program message;
+var
+	m,n:longint;
+	map:array[1..50,1..50] of longint;
+	f:array[1..100,1..50,1..50] of longint;
+	i,x1,y1,x2,y2,temp:longint;
+procedure init;
+var
+	i,j:longint;
+begin
+	readln(m,n);
+	for i:=1 to m do
+	begin
+		for j:=1 to n do read(map[i,j]);
+		readln;
+	end;
+end;
+function max(a,b:longint):longint;
+begin
+	if a>b then exit(a) else exit(b);
+end;
+begin
+	init;
+	f[1,1,2]:=map[1,2]+map[2,1]; // 第一步需特殊处理
+	for i:=1 to m+n-4 do //从上一个状态推下一个
+	begin
+		for x1:=1 to m do
+		begin
+			y1:=i+3-x1;
+			if (y1<1) or (y1>n) then continue;
+			for x2:=x1+1 to m do //大于x1就行，否则有重复
+			begin
+				y2:=i+3-x2;
+				if (y2<1) or (y2>n) then continue;
+				temp:=0;
+				if x1>1 then temp:=f[i,x1-1,x2-1];
+				if y2>1 then temp:=max(temp,f[i,x1,x2]);
+				if (x1>1) and (y2>1) then temp:=max(temp,f[i,x1-1,x2]);
+				if x1+1<>x2 then temp:=max(temp,f[i,x1,x2-1]);
+				f[i+1,x1,x2]:=temp+map[x1,y1]+map[x2,y2];
+			end;
+		end;
+	end;
+	writeln(f[m+n-3,m-1,m]);
+end.
+
+```
+

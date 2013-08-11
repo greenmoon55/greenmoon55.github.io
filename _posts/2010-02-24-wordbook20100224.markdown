@@ -1,0 +1,75 @@
+---
+author: admin
+comments: true
+date: 2010-02-24 12:41:59+00:00
+layout: post
+slug: wordbook20100224
+title: Wordbook20100224
+wordpress_id: 173
+categories:
+- Study
+tags:
+- English
+---
+
+[TechCrunch: EU Opens Antitrust Investigation Into Google. Microsoft’s Fingerprints Are Everywhere.](http://techcrunch.com/2010/02/23/eu-antitrust-google-microsoft/)
+
+antitrust
+adj. 反托拉斯的，反垄断的
+open an antitrust investigation
+
+be dominated by
+
+come of
+由 ... 引起，来自 ...
+nothing may come of it
+
+file a complaint
+提出控告，进行投诉
+file [Tn] send (sth) so that it may be recorded 送交（某物）以便备案; 提交
+
+notably
+显著地，值得注意地，特别地
+and notably, one of them is owned by Microsoft.
+
+ballot [ˈbælət]
+[U, C] the system of voting in writing and usually in secret; an occasion on which a vote is held
+n.投票；投票总数；选票  v.投票表决
+1 [I, Ipr] ~ (for sb/sth) vote by ballot (for sb/sth) 以无记名投票方式（对某人[某事物]）进行表决.
+2 [Tn, Tn.pr] ~ sb (about/on sth) cause sb to vote (on sth) secretly 使某人以无记名方式投票表决（某事物）: The union balloted its members on the proposed changes. 工会让会员们以无记名方式就所建议的改革进行表决.
+IE ballot screen
+
+ongoing
+adj [esp attrib 尤作定语] continuing to exist or progress 继续存在的; 进行中的: an ongoing debate
+
+[TechCrunch: What Should Twitter Ads Look Like? And Will You Really Love Them?](http://techcrunch.com/2010/02/23/twitter-ads-look-like-love/)
+
+fascinating
+extremely interesting
+a.迷人的，有极大吸引力的
+
+revenue
+1 money that a business or organization receives over a period of time, especially from selling goods or services
+→income
+　advertising revenue
+　Strikes have cost £20 million in lost revenues .
+2 money that the government receives from tax
+　an increase in tax revenues of 8.4%
+advertising revenue models
+
+grill
+v.烧烤；拷问 n.烤架；烧烤餐馆；烤肉；格板
+The police grilled him (with non-stop questions) for over an hour. 
+SocialMedia, was on the same panel and is the one who grilled Banerji about Twitter’s ad plans.
+
+disclose
+vt.揭露，泄露，透露
+
+authentic  
+1 known to be true or genuine 真实的; 真正的
+2 trustworthy; reliable 可信的; 可靠的: an authentic statement 可靠的陈述.
+
+Contextual ads
+contextual: relating to a particular context
+
+

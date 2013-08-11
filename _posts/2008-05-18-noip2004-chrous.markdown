@@ -1,0 +1,121 @@
+---
+author: admin
+comments: true
+date: 2008-05-18 06:46:29+00:00
+layout: post
+slug: noip2004-chrous
+title: NOIP2004提高组合唱队形
+wordpress_id: 42
+categories:
+- Programming
+tags:
+- NOIP
+---
+
+题目很容易理解，可以去[搜索](http://www.baidu.com/s?ie=gb2312&bs=noip2004%CC%E1%B8%DF&sr=&z=&cl=3&f=8&wd=noip2004%CC%E1%B8%DF+%BA%CF%B3%AA%B6%D3%D0%CE&ct=0)。在[RQNOJ](http://www.rqnoj.cn/Problem_Show.asp?PID=26)中是第26题。
+
+注意题中条件，身高不能相等，然后用求最长不上升序列的方法即可。
+
+PS：很烦RQNOJ答对题就不能提交了。。据说只能用MJ。
+<!-- more -->
+
+```pascal 
+
+program hechang;
+var
+		n, i, j: longint;
+		a: array[1..100] of longint;
+		left, right: array[1..100] of longint;
+		sum, temp: longint;
+		find: boolean;
+begin
+		assign(input, 'hechang.in');
+		reset(input);
+		sum := 0;
+		readln(n);
+		for i := 1 to n do read(a[i]);
+		readln;
+		fillchar(left, sizeof(left), 0);
+		fillchar(right, sizeof(right), 0);
+		for i := 2 to n do
+		begin
+				find := false;
+				for j := 1 to i - 1 do if (a[j] < a[i]) and (left[j] >= left[i]) then
+						begin
+								left[i] := left[j];
+								find := true;
+						end;
+				if find then inc(left[i]);
+		end;
+		for i := n - 1 downto 1 do
+		begin
+				find := false;
+				for j := n downto i + 1 do if (a[j] < a[i]) and (right[j] >= right[i]) then
+						begin
+								right[i] := right[j];
+								find := true;
+						end;
+				if find then inc(right[i]);
+		end;
+		for i := 1 to n do
+		begin
+				temp := left[i] + right[i];
+				if temp > sum then
+				begin
+						sum := temp;
+				end;
+		end;
+		writeln(n - sum - 1);
+		close(input);
+end.
+
+```
+
+
+```pascal 
+
+program hechang;
+var
+		n, i, j: longint;
+		a: array[1..100] of longint;
+		left, right: array[1..100] of longint;
+		sum, temp: longint;
+begin
+		assign(input, 'chorus10.in');
+		reset(input);
+		sum := 0;
+		readln(n);
+		for i := 1 to n do read(a[i]);
+		readln;
+		fillchar(left, sizeof(left), 0);
+		fillchar(right, sizeof(right), 0);
+		for i := 1 to n do
+		begin
+				for j := 1 to i - 1 do if (a[j] < a[i]) and (left[j] >= left[i]) then
+						begin
+								left[i] := left[j];
+						end;
+				inc(left[i]);
+		end;
+		for i := n downto 1 do
+		begin
+				for j := n downto i + 1 do if (a[j] < a[i]) and (right[j] >= right[i]) then
+						begin
+								right[i] := right[j];
+						end;
+				inc(right[i]);
+		end;
+		for i := 1 to n do
+		begin
+				temp := left[i] + right[i];
+				if temp > sum then
+				begin
+						sum := temp;
+				end;
+		end;
+		writeln(n - sum + 1);
+		close(input);
+end.
+
+```
+

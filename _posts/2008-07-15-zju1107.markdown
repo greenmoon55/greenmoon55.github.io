@@ -1,0 +1,77 @@
+---
+author: admin
+comments: true
+date: 2008-07-15 08:22:21+00:00
+layout: post
+slug: zju1107
+title: Zju1107
+wordpress_id: 55
+categories:
+- Programming
+tags:
+- ZOJ
+---
+
+转自[http://www.jlyzoi.cn](http://www.jlyzoi.cn)
+
+
+> 
+在一个N*N的方阵中,从第一行，第一个格子出发，
+每次可上下左右走，走一格算一步.至多走K步。
+要求每次走到的格子的cheese数大于先前所在格子的。求取得的最大的数.
+例如N=3,k=2
+1 2 5
+10 11 6
+12 12 7
+走法为:1--> 2--> 5--> 6--> 10--> 11--> 12.
+
+
+
+<!-- more -->
+搜索即可，不过还要循环k。
+程序：
+
+```pascal 
+
+program zju1107;
+var
+    n,k:longint;
+    map,ans:array[1..100,1..100] of longint;
+    i,j,best:longint;
+procedure search(x,y,sum:longint);
+var
+    step:longint;
+begin
+    if sum<=ans[x,y] then exit;
+    ans[x,y]:=sum;
+    if sum>best then best:=sum;
+    for step:=1 to k do
+    begin
+        if (x-step>0) and (map[x-step,y]>map[x,y]) then search(x-step,y,sum+map[x-step,y]);
+        if (y-step>0) and (map[x,y-step]>map[x,y]) then search(x,y-step,sum+map[x,y-step]);
+        if (x+step<=n) and (map[x+step,y]>map[x,y]) then search(x+step,y,sum+map[x+step,y]);
+        if (y+step<=n) and (map[x,y+step]>map[x,y]) then search(x,y+step,sum+map[x,y+step]);
+    end;
+end;
+begin
+    assign(input,'zju.in');reset(input);
+    readln(n,k);
+    while (n<>-1) do
+    begin
+        fillchar(ans,sizeof(ans),0);
+        for i:=1 to n do
+        begin
+            for j:=1 to n do read(map[i,j]);
+            readln;
+        end;
+        best:=0;
+        search(1,1,map[1,1]);
+        writeln(best);
+        readln(n,k);
+    end;
+    close(input);
+end.
+
+```
+
+PS:题中图片很可爱。

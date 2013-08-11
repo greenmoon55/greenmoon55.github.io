@@ -1,0 +1,39 @@
+---
+author: admin
+comments: true
+date: 2008-04-20 07:29:27+00:00
+layout: post
+slug: 080420
+title: '080420'
+wordpress_id: 36
+categories:
+- Blogging
+tags:
+- '404'
+- Alexa
+- Delicious
+- Firefox
+- Google
+- IE
+---
+
+好久没写东西了，转眼一个月又要过去了，现在事情真多。
+
+昨天去查，Google又没[收录](http://www.google.com/search?&hl=zh-cn&q=site%3Agreenmoon55.com)，[去论坛问](http://wordpress.org.cn/thread-12328-1-1.html)也没什么答案。不经意间找偶爱偶家的“[google总算收录我的博客了](http://blog.2i2j.com/letter-t-graffiti/google-include-my-blog.html)”，提到要有404页面，我就去找我的，结果用IE7、IE8都不显示，而FF正常。Google的机器人不是用一个文本浏览器吗？难道和IE一样不显示？记得春节时用IE7和其他模板能访问，我又换了一下模板，也不行。最后在WP官方论坛看到了一个[解决方案](http://wordpress.org/support/topic/139302)：在404文件最上方添加：
+
+
+> <?php ob_start(); ?>
+<?php header("HTTP/1.1 404 Not Found"); ?>
+
+
+我只添加了第一句，2个都添加在我这里有问题，不过不知道第一句是什么意思，搜索了也没明白，以后学PHP再说吧。正常显示后，搜索的第一行字号太大，就这样吧。
+
+刚才尝试登录FTP时提示530 Login authentication failed，应该是密码不正确，给KENSAI发消息了，等待解决。
+
+[ALEXA的算法更新了](http://www.williamlong.info/archives/1311.html)，很多中文blog的排名都有所提高，我的排名终于出现了，是[7015947](http://www.alexa.com/data/details/traffic_details/greenmoon55.com)。
+
+<del>下周会写IE8 Beta1和QQ拼音输入法的试用，QQ拼音输入法写了一部分，IE8 Beta1 上周运行出错，昨天才解决，却发现本blog首页显示不正常，详细内容以后再提。</del>
+
+_刚才谷歌拼音输入法打“对了”时居然出现的是“老了”，可惜没截图就被我把“老了”删了，看来不是自带的，但是打"dui"也找不到“老”啊。。。。_对了，以后不会输出美味书签的Daily Post了，想看的欢迎订阅Feedsky托管的[RSS](http://feed.feedsky.com/greenmoon55)，上周我在Feedsky选每日输出美味书签时居然没想到美味书签就是del.icio.us。TW也推出[网页收藏夹](http://www.theworld.cn)了，用作上传下载还可以，只是把收藏夹搬到了网上，希望以后能与TW菜单结合。不过TW这个的定位和del.icio.us不同，现在越来越觉得美味书签好用了。
+
+真乱啊！就到这里吧。

@@ -1,0 +1,33 @@
+---
+author: admin
+comments: true
+date: 2010-02-21 10:17:00+00:00
+layout: post
+slug: 1000-tweets
+title: 1000 tweets
+wordpress_id: 164
+categories:
+- Tech
+tags:
+- Twitter
+---
+
+[![](http://greenmoon55.com/wp-content/uploads/2010/02/20100221151944930.png)](http://greenmoon55.com/1000-tweets/attachment/20100221151944930/)
+
+[![](http://greenmoon55.com/wp-content/uploads/2010/02/20100221152043007.png)](http://greenmoon55.com/1000-tweets/attachment/20100221152043007/)
+
+从10:45 PM Oct 1st, 2007在Twitter上发出的第一条tweet "[Testing twitter](https://twitter.com/greenmoon55/status/305070872)" 到前几天年三十晚上(8:41 PM Feb 13th)正好发了[一千条推](https://twitter.com/greenmoon55/status/9053971852)。最开始我在Twitter上发英文，在饭否上发中文。[后来](https://twitter.com/greenmoon55/status/840149181)才在Twitter上发中文。
+
+Twitter从“What are you doing”变成了"What's Happening?"。我也在Twitter上围观了一些事，比如正虎、谷歌退出、春晚、伊朗。我也发过本地火车出轨的消息，不过我从来没有被RT过。刚才翻我过去的推，感觉有点像日记。Twitter对于我来说，主要是个获取信息的地方，当然我好像有点窥私欲^^
+（Update @2010/2/22 15:10 Twitter上的信息很多，有些消息可能是不真实的，别轻易相信，RT前要谨慎。）
+
+Twitter十分开放，你可以不上twitter.com就能注册、发消息、搜索消息等等，中文推特圈这样的网站其实和twitter.com没什么区别了，twitter有很多第三方程序，各大浏览器也都有插件，我就一直在用火狐上的Echofon，在状态栏里用起来很方便。
+[![](http://greenmoon55.com/wp-content/uploads/2010/02/20100221174916808.png)](http://greenmoon55.com/1000-tweets/attachment/20100221174916808/)
+
+现在各大门户都推出了微博，目前的格局似乎和博客很相似，新浪吸引了一些名人，不过，或许腾讯还能赢，别忘了，TX可以把QQ做成微博的客户端，只要把输入状态的地方稍加改进即可。当然啦，现在的一小撮中文推友一定会坚守在twitter上的。
+
+对于现在的官方RT之争，我的做法是如果不需要评论，则使用官方RT，减少他人负担（如 **[bbcchinese](https://twitter.com/bbcchinese)** 简讯：中朝俄边境发生6.7级地震 [via](https://twitter.com/bbcchinese/status/9263701893)）。如果需要评论，不妨使用普通RT，如果完全不需要别人知道，就直接@someone得了，免得打扰别人，比如（@someone 你是哪里人？）。
+
+对了，互相fo的时候不用太认真，我一般要看完一屏tweets再决定是否follow并可能随时unfo。也不必苛求别人和自己所有观点都相同，但如果观点都不同还是取消关注吧。。
+
+欢迎fo我，@[greenmoon55](https://twitter.com/greenmoon55)。

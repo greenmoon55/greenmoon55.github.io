@@ -1,0 +1,13 @@
+---
+author: admin
+comments: true
+date: 2012-09-22 14:56:31+00:00
+layout: post
+slug: '120922'
+title: '120922'
+wordpress_id: 399
+categories:
+- Life
+---
+
+今年第一场网络赛，还好不是完全没想法，一道简单搜索写了很久，还TLE一次，另外的概率dp，xw的想法有点问题，后来有点思路我也不愿意细想了，没到五点就撤了，很不爽。。

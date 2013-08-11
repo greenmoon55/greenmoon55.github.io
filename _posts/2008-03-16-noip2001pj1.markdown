@@ -1,0 +1,64 @@
+---
+author: admin
+comments: true
+date: 2008-03-16 07:54:50+00:00
+layout: post
+slug: noip2001pj1
+title: NOIP2001普及组第一题
+wordpress_id: 24
+categories:
+- Programming
+tags:
+- NOIP
+---
+
+题一 数的计算(20分)
+
+问题描述
+
+我们要求找出具有下列性质数的个数(包含输入的自然数n):
+
+先输入一个自然数n(n<=1000),然后对此自然数按照如下方法进行处理:
+
+1.          不作任何处理;
+
+2.          在它的左边加上一个自然数,但     加上数后,继续按此规则进行处理,直到不能再加自然数为止.
+
+样例:  输入:  6
+
+满足条件的数为  6 (此部分不必输出)
+
+16
+
+26
+
+126
+
+36
+
+136
+
+输出:  6
+
+
+```pascal 
+
+program noippj20011;
+var
+ans: array[1..1000] of longint;
+n: longint;
+i, j: longint;
+begin
+readln(n);
+for i := 1 to n div 2 do
+begin
+ans[i] := 1;
+for j := 1 to i div 2 do inc(ans[i], ans[j]);
+end;
+ans[n] := 1;
+for j := 1 to n div 2 do inc(ans[n], ans[j]);
+writeln(ans[n]);
+end.
+
+```
+

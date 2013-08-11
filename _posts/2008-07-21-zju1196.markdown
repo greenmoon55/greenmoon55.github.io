@@ -1,0 +1,179 @@
+---
+author: admin
+comments: true
+date: 2008-07-21 13:02:06+00:00
+layout: post
+slug: zju1196
+title: Zju1196 Fast Food
+wordpress_id: 56
+categories:
+- Programming
+tags:
+- DP
+- ZOJ
+---
+
+> 有一个公司,在一条街上有N个快餐店,公司决定修K个仓库以满足这些快餐电的原料需求.
+现在给出N个快餐店的横坐标(他们都在一条直线上面),要求修K个仓库,使得所有的快餐店离其对应的仓库的距离最短.
+**仓库需要建在快餐店内。**
+
+
+
+分析 from [http://www.programfan.com/blog/article.asp?id=17344](http://www.programfan.com/blog/article.asp?id=17344)，人家是All Rights Reserved？
+
+
+> 
+f是最小距离
+i是仓库数
+j是快餐店数
+cost是中间仅1个仓库时的距离，在function c中，不难理解。
+f[i,j]=min(f[i-1,k]+cost[k+1,j])    (i-1 <= k < j)
+
+
+
+
+<!-- more -->
+
+```pascal 
+
+program zju1196;
+var
+    n,k,t:longint;
+    i,j,l:longint;
+    d:array[1..200] of longint;
+    f:array[0..30,0..200] of longint;
+    cost:array[1..200,1..200] of longint;
+function c(a,b:longint):longint;
+var
+    temp,i,mid:longint;
+begin
+    temp:=0;
+    mid:=(a+b) div 2;
+    for i:=a to b do temp:=temp+abs(d[i]-d[mid]);
+    c:=temp;
+end;
+begin
+    fillchar(f,sizeof(f),0);
+    t:=0;
+    while true do
+    begin
+        inc(t);
+        readln(n,k);
+        if n=0 then break;
+        fillchar(f,sizeof(f),0);
+        for i:=1 to n do readln(d[i]);
+        for i:=1 to n-1 do
+            for j:=i+1 to n do cost[i,j]:=c(i,j);
+        for i:=0 to k do
+            for j:=1 to n do f[i,j]:=999999999;
+        for i:=1 to k do
+            for j:=i to n do
+                for l:=i-1 to j-1 do
+                    if f[i-1,l]+cost[l+1,j]&amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;f[i,j] then f[i,j]:=f[i-1,l]+cost[l+1,j];
+        writeln('Chain ',t);
+        writeln('Total distance sum = ',f[k,n]);
+        writeln;
+    end;
+end.
+
+```
+
+可以预处理f[1,*]，这样就可以用maxlongint了，更加稳妥。
+
+```pascal 
+
+program zju1196;
+var
+    n,k,t:longint;
+    i,j,l:longint;
+    d:array[1..200] of longint;
+    f:array[0..30,1..200] of longint;
+    cost:array[1..200,1..200] of longint;
+function c(a,b:longint):longint;
+var
+    temp,i,mid:longint;
+begin
+    temp:=0;
+    mid:=(a+b) div 2;
+    for i:=a to b do temp:=temp+abs(d[i]-d[mid]);
+    c:=temp;
+end;
+begin
+    fillchar(f,sizeof(f),0);
+    t:=0;
+    while true do
+    begin
+        inc(t);
+        readln(n,k);
+        if n=0 then break;
+        fillchar(f,sizeof(f),0);
+        for i:=1 to n do readln(d[i]);
+        for i:=1 to n-1 do
+            for j:=i+1 to n do cost[i,j]:=c(i,j);
+        for i:=2 to k do
+            for j:=1 to n do f[i,j]:=maxlongint;
+        for i:=1 to n do f[1,i]:=cost[1,i];
+        for i:=2 to k do
+            for j:=i to n do
+                for l:=i-1 to j-1 do
+                    if f[i-1,l]+cost[l+1,j]<f[i,j] then f[i,j]:=f[i-1,l]+cost[l+1,j];
+        writeln('Chain ',t);
+        writeln('Total distance sum = ',f[k,n]);
+        writeln;
+    end;
+end.
+
+```
+
+f还可以优化成一维数组：f:array[0..200] of longint;从后向前推即可，这样时间能从00:00.05降到00:00.04。
+
+```pascal 
+
+program zju1196;
+var
+    n,k,t:longint;
+    i,j,l:longint;
+    d:array[1..200] of longint;
+    f:array[0..200] of longint;
+    cost:array[1..200,1..200] of longint;
+function c(a,b:longint):longint;
+var
+    temp,i,mid:longint;
+begin
+    temp:=0;
+    mid:=(a+b) div 2;
+    for i:=a to b do temp:=temp+abs(d[i]-d[mid]);
+    c:=temp;
+end;
+begin
+    assign(input,'zju.in');
+    reset(input);
+    fillchar(f,sizeof(f),0);
+    t:=0;
+    while true do
+    begin
+        inc(t);
+        readln(n,k);
+        if n=0 then break;
+        f[0]:=0;
+        for i:=1 to n do readln(d[i]);
+        for i:=1 to n-1 do
+            for j:=i+1 to n do cost[i,j]:=c(i,j);
+        for i:=1 to n do f[i]:=cost[1,i];
+        for i:=2 to k do
+            for j:=n downto i do
+            begin
+                f[j]:=maxlongint;
+                for l:=j-1 downto i-1 do
+                    if f[l]+cost[l+1,j]<f[j] then f[j]:=f[l]+cost[l+1,j];
+            end;
+        writeln('Chain ',t);
+        writeln('Total distance sum = ',f[n]);
+        writeln;
+    end;
+    close(input);
+end.
+
+```
+
+

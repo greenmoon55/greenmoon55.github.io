@@ -1,0 +1,69 @@
+---
+author: admin
+comments: true
+date: 2008-07-26 08:42:12+00:00
+layout: post
+slug: zju1366
+title: Zju1366 Cash Machine
+wordpress_id: 73
+categories:
+- Programming
+tags:
+- DP
+- ZOJ
+---
+
+> [翻译](http://acm.zjnu.cn/bbs/showt.asp?boardid=2&id=120)
+735 3 4 125 6 5 3 350
+735代表要构成的货币数，3代表有3种货币面值。
+4 125代表有4个125元
+6 5代表有6个5元
+3 350代表有3个350元.输出:
+735  利用上述的货币可以构成的离735最近的货币总量.
+
+
+0 <= cash <= 100000
+0 <= N <= 10
+这个题呢可以用Zju1149的方法，这样就很简单了。注意输入时最后要readln，否则本地没问题，传上去就WA了。至于优化呢，如果加上if ans[cash] then break;时间不变或者会加长时间（POJ上16ms变成32ms），不明白为什么。
+<!-- more -->
+
+```pascal 
+
+program zju1366;
+var
+    cash,num:longint;
+    i,j,k:longint;
+    d,n:array[1..10] of longint;
+    ans:array[0..100000] of boolean;
+begin
+    while not eof do
+    begin
+        fillchar(ans,sizeof(ans),false);
+        read(cash,num);
+        for i:=1 to num do read(n[i],d[i]);
+		readln;
+        ans[0]:=true;
+        for i:=1 to num do
+            for j:=cash downto 0 do
+            if ans[j] then
+            begin
+				for k:=1 to n[i] do
+                begin
+                    if j+k*d[i]&amp;amp;amp;lt;=cash then
+                    begin
+                        if ans[j+k*d[i]] then break
+                        else ans[j+k*d[i]]:=true;
+                    end
+                    else break;
+                end;
+            end;
+        for i:=cash downto 0 do if ans[i]=true then
+        begin
+            writeln(i);
+            break;
+        end;
+    end;
+end.
+
+```
+
