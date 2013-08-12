@@ -1,4 +1,13 @@
-name: Greenmoon55's Blog
-markdown: redcarpet
+markdown: rdiscount
 pygments: true
 permalink: /:title
+rdiscount:
+  extensions: [smart]
+title : Greenmoon55's Blog
+production_url : http://greenmooon55.com
+description: "Yet another Jekyll blog"
+disqus_shortname: greenmoon55
+author :
+  name : greenmoon55
+  github : greenmoon55
+  twitter : greenmoon55
