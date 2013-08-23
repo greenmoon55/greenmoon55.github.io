@@ -1,8 +1,8 @@
 source 'http://ruby.taobao.org'
 
 gem 'rake'
-gem 'rdiscount'
-gem 'jekyll'
+gem 'jekyll', "= 1.1.2"
+gem 'redcarpet', '= 2.2.2'
 
 gem 'rmagick'
 
