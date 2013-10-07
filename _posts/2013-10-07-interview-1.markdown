@@ -1,0 +1,104 @@
+---
+layout: post
+title: 面试问题1
+---
+
+#初面
+
+## new和malloc的区别
+http://stackoverflow.com/questions/240212/what-is-the-difference-between-new-delete-and-malloc-free
+
+New | Malloc
+--- | --- 
+失败时抛出异常 | 返回 NULL
+Free Store | Heap
+可重载 | 
+
+## 进程静态区存了什么
+
+全局变量和静态变量？
+
+Data Segment (Data(variables, string literals) + BSS + Heap)  
+Stack  
+Code segment
+
+http://en.wikipedia.org/wiki/Data_segment
+
+text(program code) data bss heap stack
+
+## 进程和线程的区别
+
+没想到被问到这种问题...
+
+一个进程可能有多个线程
+共享代码段、数据段
+
+真不知道说什么...
+
+##Web相关，比如（网站）安全、性能优化
+
+CDN、缓存、前端优化，这个当时应该多说一些
+
+## 查找和排序的关系
+
+不知所云
+
+## 链表和数组区别
+
+略
+
+## 树、二叉树的有哪些应用？
+
+树：B树 数据库
+
+二叉树：平衡二叉树：C++ std::map
+
+## 重载和多态区别
+
+override, overload, polymorphism 这几个词要搞清楚...
+
+http://stackoverflow.com/questions/12893907/is-polymorphism-overloading-and-overriding-are-same-concepts
+
+Polymorphism can be achieved through overriding.  
+Method Overriding  
+Method Overloading  
+Operator Overloading
+
+## TCP UDP 区别
+TCP 三次握手保证传输  
+UDP best-effort 不保证一定发过去，开销小  
+视频用UDP，HTTP用UDP。
+
+TCP: connection oriented  
+UDP: datagram oriented 不保证传输顺序
+
+## 共30万个url，每个占空间256bytes(unicode)，任意给出一个url，判断是否在里面
+
+十分钟写思路
+
+我的想法：hash然后二分查找...当时应该问问正解怎么做...
+
+# 二面
+
+## C++和C有什么区别
+
+去死吧...
+
+C++ 面向对象，有类的概念。  
+C++ 有 STL，有 template，有异常处理
+
+然后我就说不出啥了...
+
+额，new/delete，运算符重载...
+
+## 既然有GC，Java会不会出现内存泄露，什么时候会出现？GC的原理
+
+不知道...
+
+如果一个对象 = null 了就可以被回收了吧。如果在某个循环里生成很多的对象，存到循环外的某个容器里，这样就会内存泄露吧。
+
+http://www.ibm.com/developerworks/cn/java/l-JavaMemoryLeak/
+
+## 本专业四年学了什么 大学里最大的收获 最重要的两门专业课是什么
+
+## 有没有自己课外做的东西（非实习、非课程项目、非外包）
