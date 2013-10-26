@@ -1,0 +1,37 @@
+---
+layout: post
+title: Skip List 的应用
+---
+
+首先这里是 [skip list](http://www.redisbook.com/en/latest/internal-datastruct/skiplist.html) 的介绍。
+
+# Redis Sorted Set
+
+之前用 Redis 的 Sorted Set 存在线用户。
+
+```ruby
+# key, score, member
+$redis.zadd('online-users', Time.now.to_i, current_user.id)
+```
+
+查询某用户最后访问的时间
+
+```ruby
+last_seen = $redis.zscore("online-users", self.id)
+```
+ZADD 的复杂度是 O(log(N))，ZSCORE 的复杂度是 O(1)。
+
+ZSET 是由一个 dict 和 skip list 实现的。dict 是一个根据 member 生成的哈希表，所以 ZSCORE 的复杂度是 O(1)，ZADD 还需插入到 skip list 里所以需要 O(log(N))。
+
+这个 skip list 是根据 score 排序的，所以根据 score 找 member 的复杂度是 O(log(N))，用于 ZRANK 等命令。
+
+[有序集 — Redis 设计与实现](http://www.redisbook.com/en/latest/datatype/sorted_set.html)
+
+# 倒排索引
+
+前几天在公司听了搜索的分享，才知道这个东西。
+[维基百科](http://zh.wikipedia.org/wiki/%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95)
+
+比如有两个到排索引，一个是“五角场”，另外一个是“火锅”。那在搜索“五角场 火锅”的时候就要合并这两条链，找出两条链上相同的节点。
+
+如果是普通的链表的话，效率是 O(M + N)。skip list 在合并时，如果另外那个表跳跃过去的节点仍然小于当前表的节点，中间的节点就不用考虑了。
