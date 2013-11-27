@@ -45,7 +45,7 @@ def _populate_choices(self, request, context):
         if meth is not None and callable(meth):
             bound_field.choices = meth(request, context)
 ```
-哈，原来在这里，这回不用解释什么了吧。具体我也还没研究= =
+哈，原来在这里，看出来做什么了吧。太具体的我也还没研究= =
 
 
 最后，在 `__init__` 中有一行。
@@ -55,6 +55,4 @@ self._populate_choices(request, context)
 ```
 
 看大牛写的高质量代码也有点意思，我想吐槽貌似 Django 的文档不够全面啊，至少跟 Rails 比。
-
-
 
