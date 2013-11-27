@@ -3,7 +3,7 @@ layout: post
 title: Horizon 中 Python 元编程的例子
 ---
 
-Horizon 中创建虚拟机的 workflow 里面有这样一个类，用来选择虚拟机的一些信息，比如配置。[GitHub代码](https://github.com/openstack/horizon/blob/cde81c38027b17014abcd1449a263bdc411503cc/openstack_dashboard/dashboards/project/instances/workflows/create_instance.py#L170)
+Horizon 中创建虚拟机的 workflows 里面有这样一个类，用来选择虚拟机的一些信息，比如配置。[GitHub代码](https://github.com/openstack/horizon/blob/cde81c38027b17014abcd1449a263bdc411503cc/openstack_dashboard/dashboards/project/instances/workflows/create_instance.py#L170)
 
 ```python
 class SetInstanceDetailsAction(workflows.Action):
