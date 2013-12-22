@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Debian Wheezy 使用 oh-my-zsh 的小问题
+date: 2013-12-22 13:26
 ---
 
 最近发现默认的 Shell（应该是 bash）有点小问题，果断换成 zsh，装了 oh-my-zsh 之后发现每次开启终端都会显示类似环境变量的东西
