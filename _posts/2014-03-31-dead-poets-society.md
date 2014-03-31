@@ -1,5 +1,7 @@
----
+﻿---
 published: false
+title: "死亡诗社"
+layout: "post"
 ---
 
 ## poets
