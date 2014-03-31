@@ -16,5 +16,10 @@ layout: post
 
 电影里印象很深的还有这段，Mr.Keating 带学生看很多年前也在这所学校上学的学生的照片，这些照片就摆在楼下，现在的学生们每天匆匆走过，从不驻足。照片里的学生和现在的学生差不多，充满希望，不过现在他们已经离世了，最后到底有没有有所成就呢？
 
-> They're not that different from you, are they? Same haircuts. Full of hormones, just like you. Invincible, just like you feel. The world is their oyster. **They believe they're destined for great things, just like many of you, their eyes are full of hope, just like you.** Did they wait until it was too late to make from their lives even one iota of what they were capable? Because, you see gentlemen, these boys are now fertilizing daffodils. But if you listen real close, you can hear them whisper their legacy to you. Go on, lean in. Listen, you hear it? - - Carpe - - hear it? - - **Carpe, carpe diem, seize the day boys, make your lives extraordinary.** 
+> They're not that different from you, are they? Same haircuts. Full of hormones, just like you. Invincible, just like you feel. The world is their oyster. **They believe they're destined for great things, just like many of you, their eyes are full of hope, just like you.** Did they wait until it was too late to make from their lives even one iota of what they were capable? Because, you see gentlemen, these boys are now fertilizing daffodils. But if you listen real close, you can hear them whisper their legacy to you. Go on, lean in. Listen, you hear it? - - Carpe - - hear it? - - **Carpe, carpe diem, seize the day boys, make your lives extraordinary.**
 
+还有电影中评价诗的方法：完美程度为x轴、重要性为y轴，面积越大说明诗越好，真的是笑死了哈哈。于是老师直接让大家把这页书撕掉了。
+
+
+[John Keating (Character) - Quotes - IMDB](http://www.imdb.com/character/ch0004782/quotes)
+[残酷青春 (死亡诗社 影评) - 豆瓣](http://movie.douban.com/review/1690137/)
