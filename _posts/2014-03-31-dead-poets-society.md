@@ -22,4 +22,5 @@ layout: post
 
 
 [John Keating (Character) - Quotes - IMDB](http://www.imdb.com/character/ch0004782/quotes)
+
 [残酷青春 (死亡诗社 影评) - 豆瓣](http://movie.douban.com/review/1690137/)
