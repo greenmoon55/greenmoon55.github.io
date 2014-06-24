@@ -1,7 +1,8 @@
 ---
-published: false
+published: true
+layout: post
+title: 毕业设计
 ---
 
-## 毕业设计
-
-<script async class="speakerdeck-embed" data-id="cc28ba40dda20131b761266a7d836638" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+还是写写毕设的过程吧。
+[答辩PPT](https://speakerdeck.com/greenmoon55/ju-lei-fen-xi-zai-duan-xiao-wen-ben-shang-de-ying-yong)
