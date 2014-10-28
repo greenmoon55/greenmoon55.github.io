@@ -5,6 +5,7 @@ published: true
 ---
 
 `novaclient/v1_1/contrib`里可以加入新的指令，例如：
+
 ```python
 @utils.arg('server',
         metavar='<server>',
@@ -16,6 +17,7 @@ def do_instance_action_list(cs, args):
     utils.print_list(actions,
         ['Action', 'Request_ID', 'Message', 'Start_Time'], sortby_index=3)
 ```
+
 那这个函数是怎么被调用的呢
 
 
@@ -64,4 +66,4 @@ def _discover_via_contrib_path(self, version):
 ```
 其中 `glob.iglob(ext_glob)` 会生成一个 iterator 循环所有 `contrib/*.py`，`imp.load_source(name, ext_path)` 再加载 module。
 
-最后载入 Entry Points `novaclient.extensions`，参考 http://stackoverflow.com/a/9615473
+最后载入 Entry Points `novaclient.extensions`，参考 [http://stackoverflow.com/a/9615473](http://stackoverflow.com/a/9615473)
