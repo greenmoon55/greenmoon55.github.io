@@ -61,7 +61,8 @@ def _discover_via_contrib_path(self, version):
         if name == "__init__":
             continue
 
-        module = 
+        module = imp.load_source(name, ext_path)
+
         yield name, module
 ```
 其中 `glob.iglob(ext_glob)` 会生成一个 iterator 循环所有 `contrib/*.py`，`imp.load_source(name, ext_path)` 再加载 module。
