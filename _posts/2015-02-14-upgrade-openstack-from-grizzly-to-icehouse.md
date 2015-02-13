@@ -4,7 +4,7 @@ title: Upgrade Openstack From Grizzly To Icehouse
 published: true
 ---
 
-首先，我们在Meetup的时候介绍过升级，请看[这里](http://techshow.ctrip.com/archives/810.html)的Session 3。说到升级，想起Paris summit的一个视频：Upgrading in Place from Grizzly to Icehouse: A Cautionary Tale[https://www.openstack.org/summit/openstack-paris-summit-2014/session-videos/presentation/upgrading-in-place-from-grizzly-to-icehouse-a-cautionary-tale]，具体说什么没啥印象了，只记得里面那句吐槽：one developer, two weeks，事实证明不可能那么快= =
+首先，我们在Meetup的时候介绍过升级，请看[这里](http://techshow.ctrip.com/archives/810.html)的Session 3。说到升级，想起Paris summit的一个视频：[Upgrading in Place from Grizzly to Icehouse: A Cautionary Tale](https://www.openstack.org/summit/openstack-paris-summit-2014/session-videos/presentation/upgrading-in-place-from-grizzly-to-icehouse-a-cautionary-tale)，具体说什么没啥印象了，只记得里面那句吐槽：one developer, two weeks，事实证明不可能那么快= =
 
 网上有很多种升级方案，例如[RDO的分类](https://openstack.redhat.com/Upgrading_RDO)就很不错。我们这边的环境对cloud的可用性要求不高，只要已经部署好的VM不受影响，可以接受较长时间不部署/管理虚拟机，所以我们最终选择了pdf里的方案一，就是controller原地升级，其实最后我们觉得换controller也不错...能降低点风险，还好升级时用方案一没遇到太多问题。
 
