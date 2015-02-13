@@ -12,7 +12,7 @@ published: true
 
 首先就是grizzly的keystone client不支持降级（db sync指定版本），这个很好解决，改改代码咯。还有icehouse的nova db migration只支持从H版升上来，解决办法就是从H版把从G升到H的代码搞过来。。
 
-难点在于neutron的db migration。I版的neutron经过重构，有了ml2 plugin，我们db sync之后还需要用官方提供的[migrate to ml2的脚本](https://github.com/openstack/neutron/blob/3116ffafdca72e9eef70f4eaf90626982ae51d4c/neutron/db/migration/migrate_to_ml2.py)来改数据库，以支持ml2 plugin。H版的neutron在建VM的时候会把host和port插入portbindingports表，migrate to ml2脚本就会从这个表读数据并插入到`ml2_port_bindings`表里，network segment的信息是由ovs_network_bindings表搞出来的。（待补充）。。
+难点在于neutron的db migration。I版的neutron经过重构，有了ml2 plugin，我们db sync之后还需要用官方提供的[migrate to ml2的脚本](https://github.com/openstack/neutron/blob/3116ffafdca72e9eef70f4eaf90626982ae51d4c/neutron/db/migration/migrate_to_ml2.py)来改数据库，以支持ml2 plugin。H版的neutron在建VM的时候会把host和port插入portbindingports表，migrate to ml2脚本就会从这个表读数据并插入到`ml2_port_bindings`表里，network segment的信息是由`ovs_network_bindings`表搞出来的。（待补充）。。
 
 下面问题来了，portbindingports是H版才有的表，G版根本没有啊，从grizzly升上来也不会建这个表，这样migrate to ml2就会有问题。不过用ovs plugin跑起来没啥问题...最终我们的办法是在db sync之后，migrate to ml2之前把host和port插入进去，这样看起来数据ok！网上没搜到这种问题，很奇怪。还有I版用ovs plugin的时候，如果是手工建的port，neutron不会插入到portbindingports里，migrate to ml2就不会插入`ml2_port_bindings`表里，但是ml2 plugin会把这种port插入`ml2_port_bindings`。Anyway，我们最后也把这种unbound的port都插入进去了。
 
