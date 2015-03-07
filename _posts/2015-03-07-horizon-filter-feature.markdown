@@ -17,14 +17,14 @@ published: true
 
 代码以当前 stable/icehouse 分支为准
 
-首先从后端看起，[horizon/tables/actions.py](https://github.com/openstack/horizon/blob/stable/icehouse/horizon/tables/actions.py) 有 FilterAction class
+首先从后端看起，[horizon/tables/actions.py](https://github.com/openstack/horizon/blob/cfa611bedf14c9b1ef0b5689b6942aa6431e6313/horizon/tables/actions.py) 有 FilterAction class
 
 ```python
 class FilterAction(BaseAction):
 ```
 
 
-[openstack_dashboard/dashboards/project/instances/tables.py](https://github.com/openstack/horizon/blob/stable/icehouse/openstack_dashboard/dashboards/project/instances/tables.py) 有
+[openstack_dashboard/dashboards/project/instances/tables.py](https://github.com/openstack/horizon/blob/cfa611bedf14c9b1ef0b5689b6942aa6431e6313/openstack_dashboard/dashboards/project/instances/tables.py) 有
 
 ```python
 class InstancesFilterAction(tables.FilterAction):
@@ -36,7 +36,7 @@ class InstancesFilterAction(tables.FilterAction):
                 if q in instance.name.lower()]admin
 ```
 
-[openstack_dashboard/dashboards/admin/instances/tables.py](https://github.com/openstack/horizon/blob/stable/icehouse/openstack_dashboard/dashboards/admin/instances/tables.py)
+[openstack_dashboard/dashboards/admin/instances/tables.py](https://github.com/openstack/horizon/blob/cfa611bedf14c9b1ef0b5689b6942aa6431e6313/openstack_dashboard/dashboards/admin/instances/tables.py)
 
 ```python
 class AdminInstanceFilterAction(tables.FilterAction):
@@ -63,9 +63,9 @@ class AdminInstanceFilterAction(tables.FilterAction):
         return instances
 ```
 
-然后我们看下前端的实现，[horizon/templates/horizon/common/_data_table_table_actions.html](https://github.com/openstack/horizon/blob/stable/icehouse/horizon/templates/horizon/common/_data_table_table_actions.html)
+然后我们看下前端的实现，[horizon/templates/horizon/common/_data_table_table_actions.html](https://github.com/openstack/horizon/blob/cfa611bedf14c9b1ef0b5689b6942aa6431e6313/horizon/templates/horizon/common/_data_table_table_actions.html)
 
-可以看到这里有三种 filter_type，InstancesFilterAction 默认是 query，AdminInstanceFilterAction 是 server。query 和 server 有什么不同呢？我们去看看 js。
+可以看到这里有三种 `filter_type`，InstancesFilterAction 默认是 query，AdminInstanceFilterAction 是 server。query 和 server 有什么不同呢？我们去看看 js。
 
 ```javascript
 horizon.datatables.set_table_query_filter = function (parent) {
@@ -122,7 +122,7 @@ horizon.datatables.set_table_query_filter = function (parent) {
 
 那么服务端的 filter 是怎么实现的呢？
 
-[horizon/tables/base.py](https://github.com/openstack/horizon/blob/stable/icehouse/horizon/tables/base.py)
+[horizon/tables/base.py](https://github.com/openstack/horizon/blob/cfa611bedf14c9b1ef0b5689b6942aa6431e6313/horizon/tables/base.py)
 
 class DataTable 里的 filtered_data 会调用 action 的 filter 函数，而 get_rows 函数会从 filtered_data 里读数据。
 
