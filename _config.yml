@@ -1,6 +1,6 @@
 markdown: redcarpet
 redcarpet:
-  extensions: ["tables"]
+  extensions: ["tables", "no_intra_emphasis"]
 pygments: true
 permalink: /:title
 rdiscount:
