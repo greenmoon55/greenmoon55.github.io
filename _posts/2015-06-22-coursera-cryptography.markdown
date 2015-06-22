@@ -29,4 +29,6 @@ published: true
 
 第六周：Trapdoor Functions, RSA, PKCS1 v1.5, PKCS1 v2.0: OAEP, EIGamal
 
+[百度脑图](http://naotu.baidu.com/viewshare.html?shareId=awh8z6rrpwk4)
+
 现在感觉只是大概了解了这些概念和数学证明，习题做得太少，已经忘了一些了。。知道这些已经知足啦，期待Part 2:)
