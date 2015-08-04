@@ -51,3 +51,8 @@ compute/manager.py有_reschedule_or_error，如果失败会RPC调用scheduler。
 [臭蛋 Nova Scheduler分析](http://www.choudan.net/2013/08/11/Nova-Scheduler%E5%88%86%E6%9E%90.html)
 
 [Mirantis: Nova Scheduler-Database Interactions: How to Nail Those Scalability Thwarters](https://www.mirantis.com/blog/nova-scheduler-database-interactions-how-to-nail-those-scalability-thwarters/)
+
+
+Update:
+
+最后补充个用 pyreverse 画的[类图](http://greenmoon55.com/images/scheduler_classes.png)
