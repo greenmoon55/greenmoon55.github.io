@@ -1,6 +1,4 @@
 permalink: /:title
-rdiscount:
-  extensions: [smart]
 title : Greenmoon55's Blog
 production_url : http://greenmooon55.com
 description: "Yet another Jekyll blog"
