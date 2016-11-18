@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Coursera Maching Learning
+title: Coursera Machine Learning
 published: true
 ---
 
@@ -32,7 +32,7 @@ published: true
     
     Kernel: 生成feature的好方法，可以选择数据作为landmarks，选择基于到landmark的距离的similarity methods来生成新的数据。
     
-    ![](images/ml-logisstic-regression-svm.png)
+    ![](images/ml-logistic-regression-svm.png)
 
 8. KMeans
 
