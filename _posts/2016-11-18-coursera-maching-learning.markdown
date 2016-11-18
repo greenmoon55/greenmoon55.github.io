@@ -10,6 +10,7 @@ published: true
 剔除了几乎所有需要数学知识的部分，只需要知道如何求导以及矩阵乘法。编程作业里的所有数学公式都给出来了，只需要在MATLAB里实现就可以了。这门课很奇葩的一点是入门比较难...后面越来越简单。
 
 总结一下这门课都讲了啥？
+
 1. 线性回归，cost function, gradient descent, vectorized implementation
 
 2. Feature scaling, mean normalization, normal equation（但是数据量大的时候很慢）, regularization
@@ -27,9 +28,10 @@ published: true
 
 7. SVM：修改Logistic Regression的model，优化theta即可获得比较好的结果。
 
-参考：[支持向量机: Maximum Margin Classifier](http://blog.pluskid.org/?p=632)
-Kernel: 生成feature的好方法，可以选择数据作为landmarks，选择基于到landmark的距离的similarity methods来生成新的数据。
-![](images/ml-logisstic-regression-svm.png)
+    参考：[支持向量机: Maximum Margin Classifier](http://blog.pluskid.org/?p=632)
+    
+    Kernel: 生成feature的好方法，可以选择数据作为landmarks，选择基于到landmark的距离的similarity methods来生成新的数据。
+    ![](images/ml-logisstic-regression-svm.png)
 
 8. KMeans
 
@@ -37,11 +39,11 @@ Kernel: 生成feature的好方法，可以选择数据作为landmarks，选择�
 
 10. Anomaly Detection，这里用的是高斯分布，判断数据点是否离均值太远
 
-![](images/ml-anomaly-detection.png)
+    ![](images/ml-anomaly-detection.png)
 
 11. Collabrative Filtering
 
-![](images/ml-collabrative-filtering.png)
+    ![](images/ml-collabrative-filtering.png)
 
 11. Stochastic gradient descent(random shuffle first, can slowly decrease alpha), mini-batch gradient descent, MapReduce
 
