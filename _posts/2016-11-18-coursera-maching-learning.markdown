@@ -21,8 +21,8 @@ published: true
 
 5. Training/validation/test sets
 
-![](images/ml-bias-variance)
-![](images/ml-learning-curve.png)
+   ![](images/ml-bias-variance.png)
+   ![](images/ml-learning-curve.png)
 
 6. Spam classification, Precision/Recall, F Score
 
@@ -31,6 +31,7 @@ published: true
     参考：[支持向量机: Maximum Margin Classifier](http://blog.pluskid.org/?p=632)
     
     Kernel: 生成feature的好方法，可以选择数据作为landmarks，选择基于到landmark的距离的similarity methods来生成新的数据。
+    
     ![](images/ml-logisstic-regression-svm.png)
 
 8. KMeans
