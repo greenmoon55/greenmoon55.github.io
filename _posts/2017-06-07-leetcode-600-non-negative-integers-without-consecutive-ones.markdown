@@ -33,7 +33,7 @@ class Solution:
             return self.countLimit(i+1, 0, size, a, top)
         else:
             return self.countLimit(i+1, 0, size, a, top) + self.countLimit(i+1, 1, size, a, top)
-            d
+            
             
     def findIntegers(self, num):
         """
@@ -61,4 +61,4 @@ class Solution:
         return res + 1
 ```
 
-all数组表示1开头符合条件的数的数量，本来是通过count函数来sadf
+all数组表示1开头符合条件的数的数量，本来是通过count函数来搜索的，后来发现是斐波那契数列就直接算了。countLimit用来搜索长度与n相同的数，top用来标记当前是否与n一样
