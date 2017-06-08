@@ -4,7 +4,7 @@ comments: true
 date: 2012-03-16 12:54:02+00:00
 layout: post
 slug: codeforces-round-104-div-2
-title: 'Codeforces Round #104 (Div. 2) '
+title: 'Codeforces Round #104 (Div. 2)'
 wordpress_id: 346
 categories:
 - Programming
