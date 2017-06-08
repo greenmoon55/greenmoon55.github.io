@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Codeforces Round #418 (Div. 2)
+title: 'Codeforces Round #418 (Div. 2)'
 published: true
 ---
 
