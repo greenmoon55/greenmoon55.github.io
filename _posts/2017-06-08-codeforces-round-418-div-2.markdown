@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Codeforces Round #418 (Div. 2)
-published: false
+published: true
 ---
 
 又是发挥很差的一场，只过了A..
@@ -89,6 +89,48 @@ for i in range(1, len(a)):
 
 # C. An impassioned circulation of affection
 
-当时把自己带到沟里了，想着先split，然后就卡“aaaaaa”这种
-# C. An impassioned circulation of affection情况
-# C. An impassioned circulation of affection，
+当时把自己带到沟里了，想着先split，然后就卡在“aaaaaa”这种情况。今天发现只要暴力扫一遍就好，不需要split啥的。。注意需要先算好所有答案，因为q太大了。
+卡python也是无语，只好再用c++写一下。我这里循环用滑动窗口来做，j先确定当前串的长度，另一种做法是直接两重循环串的起点和终点，两种做法都是O(n^2)，没有区别。官方题解还提到了有复杂度更低的算法，目前没有动力去看。。
+
+```cpp
+#include <iostream>
+#include <string>
+using namespace std;
+int f[26][1510];
+
+int main() {
+    int n, q, m;
+    char c;
+    string s;
+    cin >> n;
+    cin >> s;
+    for (int i = 0; i < 26; i++) {
+        char ch = 'a' + i;
+        for (int j = 1; j <= n; j++) {
+            int l = 0, r = 0;
+            int count = 0;
+            while (r < n) {
+                if (s[r] != ch) {
+                    count++;
+                }
+                while (count > j) {
+                    if (s[l] != ch) {
+                        count--;
+                    }
+                    l++;
+                }
+                f[i][j] = max(f[i][j], r-l+1);
+                r++;
+            }
+        }
+    }
+    cin >> q;
+    while (q) {
+        cin >> m >> c;
+        cout << f[int(c-'a')][m] << endl;
+        q--;
+    }
+    return 0;
+}
+```
+
