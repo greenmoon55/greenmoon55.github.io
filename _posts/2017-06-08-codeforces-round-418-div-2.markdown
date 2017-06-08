@@ -44,11 +44,6 @@ published: true
 ```
 
 ```python
-
-# 5
-# 5 4 5 3 1
-# 4 4 2 3 1
-
 from collections import defaultdict
 n = int(input())
 a = [int(x) for x in input().split()]
