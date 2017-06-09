@@ -1,7 +1,7 @@
 ---
 layout: post
 title: LeetCode 44 Wildcard Matching
-published: false
+published: true
 ---
 
 ```python
