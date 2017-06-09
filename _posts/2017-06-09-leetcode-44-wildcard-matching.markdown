@@ -67,4 +67,4 @@ class Solution(object):
                         break
         return f[len(s)]
 ```
-此时f[i]表示截止到
+此时f[i]表示截止到当前ch，能否匹配到第i位。
