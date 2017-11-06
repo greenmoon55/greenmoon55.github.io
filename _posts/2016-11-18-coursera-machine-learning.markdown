@@ -21,8 +21,8 @@ published: true
 
 5. Training/validation/test sets
 
-   ![](images/ml-bias-variance.png)
-   ![](images/ml-learning-curve.png)
+   ![](/images/ml-bias-variance.png)
+   ![](/images/ml-learning-curve.png)
 
 6. Spam classification, Precision/Recall, F Score
 
@@ -32,7 +32,7 @@ published: true
     
     Kernel: 生成feature的好方法，可以选择数据作为landmarks，选择基于到landmark的距离的similarity methods来生成新的数据。
     
-    ![](images/ml-logistic-regression-svm.png)
+    ![](/images/ml-logistic-regression-svm.png)
 
 8. KMeans
 
@@ -40,11 +40,11 @@ published: true
 
 10. Anomaly Detection，这里用的是高斯分布，判断数据点是否离均值太远
 
-    ![](images/ml-anomaly-detection.png)
+    ![](/images/ml-anomaly-detection.png)
 
 11. Collabrative Filtering
 
-    ![](images/ml-collabrative-filtering.png)
+    ![](/images/ml-collabrative-filtering.png)
 
 11. Stochastic gradient descent(random shuffle first, can slowly decrease alpha), mini-batch gradient descent, MapReduce
 
