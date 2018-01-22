@@ -16,14 +16,15 @@ published: true
 
 ![Newport](/images/2017-newport.jpg)
 
-Newport
+<p align="center">Newport</p>
 
 ![WSQ](/images/2017-wsq.jpg)
 
-Washington Square Park
+<p align="center">Washington Square Park</p>
 
 ![Bobst](/images/2017-bobst.jpg)
 
-最喜欢的图书馆四楼
+<p align="center">最喜欢的图书馆四楼</p>
+
 
 2018没有什么特别的想法，学喜欢的课，出去多玩玩，好好管理时间，希望一切顺利。
