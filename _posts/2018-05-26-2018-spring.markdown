@@ -19,12 +19,11 @@ AI: 30-40人 workload: 1天/周
 总之跟top学校的ai课相比差距巨大，刚好适合我来水一水。。不然的话完全没必要选这门课，看看berkley的cs 188x或者台大的coursera的ai就行了。rmp教授低分是有原因的…最影响心情的一门课。
 
 
-
 HPC for ML: 20-30人 workload: 1天/周
 
 选这课的原因是没敢选compiler，这个看起来有点水所以就选了，不过体验也很一般，很多人都有点后悔选了这门…基本上就是把每个领域的入门教程抄过来放在slide里，三个lab写写pytorch, cuda和mpi，还是学到了一些东西，只是完全可以自学。我还记得春假那会儿一个人在图书馆搞了五天lab1，完全就是浪费生命…然后第一次去piazza求情extend ddl。lab设计一般，说明很不清楚，他自己都没有写过，有次给的checksum还是错的… final考试非常奇怪，有种文科课的感觉...很多东西我觉得他上课没有认真讲就考了，公式也是只告诉你怎么算，并没有说原理，虽然原理其实两分钟就能讲完。
 
-这门课内容还是很好的，虽然讲得浅但提供了一个roadmap...现在ml这么火，很多公司是想要懂算法也懂systems的人的，例如[阿里](https://zhuanlan.zhihu.com/p/37195631)，还有这个：[机器学习相关岗位面试中，有哪些加（zhuang）分（bi）项？](https://www.zhihu.com/question/56676679/answer/151505274) , uw也开始搞[saml group](http://saml.cs.washington.edu)了。
+这门课内容还是很好的，虽然讲得浅但提供了一个roadmap...现在ml这么火，很多公司是想要懂算法也懂systems的人的，例如[阿里](https://zhuanlan.zhihu.com/p/37195631)，还有这个：[机器学习相关岗位面试中，有哪些加（zhuang）分（bi）项？](https://www.zhihu.com/question/56676679/answer/151505274) , uw也开始搞[saml group](http://saml.cs.washington.edu)了。其实适合ds的同学选。
 
 这门课也是目前遇到大神最多的一门，太可怕了只能给人家当分母...相关课程的话，当然要提cmu的15-418，视频是公开的，还有uw的systems for ml，陈天奇开的课哦（[微博](https://weibo.com/2397265244/GexRAwOHk)）。
 
@@ -53,7 +52,7 @@ ML: 160人 workload: 3天/周
 
 2.课程作业就很多了，谁有空自己写代码玩
 
-3.很多人学cs是为了会一些技术，把cs当作工具来完成自己的目的，而不是因为好奇心来学习。
+3.很多人学cs是为了会一些技术，把cs当作工具来完成自己的目的，而不是因为好奇心来学习。毕竟life is hard，有多少人能每天都做自己想做的事情呢。
 
 
 
