@@ -43,7 +43,7 @@ ML: 160人 workload: 3天/周
 
 ### NYU
 
-去年总觉得这边cs哪里不对但又说不出来，一个是没有多少colloquium，这学期倒是发现了很多...一共大概去了10个，nlp, pl, os啥都有，就是听不懂只能蹭吃噌喝…回头又没时间（不想）看paper…感受各位phd/postdoc/prof都很会讲，整体都很有条理。第二点是没有cs氛围…就像看到reddit[这一条](https://www.reddit.com/r/nyu/comments/7zba30/the_cs_scene_at_nyu_cas/)。
+去年总觉得这边cs哪里不对但又说不出来，一是去年以为没有多少colloquium，这学期倒是发现了很多...我去了10个左右，nlp, pl, os啥都有，就是听不懂只能蹭吃噌喝…回头又没时间（不想）看paper… 听完感觉各位phd/postdoc/prof都很会讲，每个人讲得都很有条理。第二点是没有cs氛围…就像看到reddit[这一条](https://www.reddit.com/r/nyu/comments/7zba30/the_cs_scene_at_nyu_cas/)。
 > Personally I’ve found a lot of the students to be intelligent, hard working people, but what I call “tech enthusiasts”. They like the idea of programming, they may even go to clubs like tech@nyu or BUGS (open source club), but they don’t spend the time to actually program. 
 
 不像某学校"空气中弥漫着代码的味道"。我觉得有很多原因吧，比如
@@ -53,8 +53,6 @@ ML: 160人 workload: 3天/周
 2.课程作业就很多了，谁有空自己写代码玩
 
 3.很多人学cs是为了会一些技术，把cs当作工具来完成自己的目的，而不是因为好奇心来学习。毕竟life is hard，有多少人能每天都做自己想做的事情呢。
-
-
 
 ### 实习
 
