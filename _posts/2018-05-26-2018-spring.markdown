@@ -1,0 +1,64 @@
+---
+layout: post
+title: 2018Spring
+published: true
+---
+
+忍了一学期没有吐槽，今天刚好小长假无聊，并且成绩刚刚出来，终于可以写一篇流水帐了。
+
+
+
+这学期没有找工压力，本来以为会很闲，结果过得还是挺忙的，大部分时间还是在写作业，选的三门课是AI+HPC for ML + 1003 ML。这学期的选课思路非常简单，为了保留上ml后续课程的可能性，所以一定要选ml，结果现在发现后面应该不会上ml相关的了…这门课确实不错，但是剩下两门比较一般，好吧，现在开启吐槽模式。
+
+### 课程
+
+AI: 30-40人 workload: 1天/周
+
+老师是大佬，教材AIMA他也写了一些内容，但是讲课水平确实一般。抄袭一句经典的话，如果你懂了，那么不用上他的课，如果你不懂，也很难听懂。有次我问旁边的美国人，结果他也没懂… 这门课内容其实还可以，对ai整体介绍了一下，虽然学的东西没有什么用。AIMA也不错，你会发现以前自以为是写搜索的小聪明（例如Bidirectional Search）人家早就研究过。但是讲得太浅了…其实这门课我觉得最有趣的地方是写sat solver，虽然只是个dfs。本科就听说cs的同学在写prolog神马的，现在终于知道他们在干嘛了…这门课不好的地方就是很多作业是做cs同学最讨厌做的事情（我可以这么说吗？），也就是明明可以写代码做的东西非要手算，programming assignment也跟好学校的ai课有很大差距，要是能写个游戏多好（例如stanford cs221）。我就不用说作业成绩一个月之后才出来了，反正大家基本都是满分只看final，final一道选择占总成绩2.5%...
+
+总之跟top学校的ai课相比差距巨大，刚好适合我来水一水。。不然的话完全没必要选这门课，看看berkley的cs 188x或者台大的coursera的ai就行了。rmp教授低分是有原因的…最影响心情的一门课。
+
+
+
+HPC for ML: 20-30人 workload: 1天/周
+
+选这课的原因是没敢选compiler，这个看起来有点水所以就选了，不过体验也很一般，很多人都有点后悔选了这门…基本上就是把每个领域的入门教程抄过来放在slide里，三个lab写写pytorch, cuda和mpi，还是学到了一些东西，只是完全可以自学。我还记得春假那会儿一个人在图书馆搞了五天lab1，完全就是浪费生命…然后第一次去piazza求情extend ddl。lab设计一般，说明很不清楚，他自己都没有写过，有次给的checksum还是错的… final考试非常奇怪，有种文科课的感觉...很多东西我觉得他上课没有认真讲就考了，公式也是只告诉你怎么算，并没有说原理，虽然原理其实两分钟就能讲完。
+
+这门课内容还是很好的，虽然讲得浅但提供了一个roadmap...现在ml这么火，很多公司是想要懂算法也懂systems的人的，例如[阿里](https://zhuanlan.zhihu.com/p/37195631)，还有这个：[机器学习相关岗位面试中，有哪些加（zhuang）分（bi）项？](https://www.zhihu.com/question/56676679/answer/151505274) , uw也开始搞[saml group](http://saml.cs.washington.edu)了。
+
+这门课也是目前遇到大神最多的一门，太可怕了只能给人家当分母...相关课程的话，当然要提cmu的15-418，视频是公开的，还有uw的systems for ml，陈天奇开的课哦（[微博](https://weibo.com/2397265244/GexRAwOHk)）。
+
+
+
+ML: 160人 workload: 3天/周
+
+这门课选得相当不容易，因为只给cs30个名额，所以等到开学第一周才选到。rmp满分的课，ds最好的课之一。这门课只是第一周会觉得难一些，后面没有想象的那么难，但是作业不少，作业、考试以及notes都是精心准备的，没有太多数学，是理论和实践的完美结合，是非常值得选的一门课。学了这门课我就敢说入门ml了，也有信心去自学相关内容了。Project给大家一个跟大佬交流的机会，但是非常可惜我们并没有怎么交流。首先是被队友坑，所以只能四个人组队，搞成了我这学期压力最大的事情，还好我们有大佬。我们dataset选的比较奇怪，我们四个都不想做所以拖到了最后几天别人都搞定的时候才搞。刚好那天hpc gateway升了openssh搞的我没法登进去…整个人都抑郁了…现在会想起来如果选一个经常交流的advisor会更好，并且完全可以两人组队，甚至还有一个人做的…这样会舒服很多。ml project做完让我再也不想搞data science了，感觉ds只是把code当做工具，得到某些结果，而我希望code是个可以持续改进的“产品”。
+
+我总觉得这门课从2015到现在慢慢变简单了，虽然对我来说还是不容易，不知道是不是错觉。
+
+其实final之前又发现一堆问题，比如上学期觉得平时没有好好复习，这学期下课之后都会回头看一眼，但是final前几天才发现很多东西其实没学会，所以及时整理非常重要，希望以后每周都能花一两个小时来整理一下，尽量少开新坑多复习...就像[david的建议](https://github.com/davidrosenberg/mlcourse/blob/gh-pages/course-faq.md)。
+
+> I think you'll be surprised how much easier it is to remember something once you've fully mastered it. In any case, once you master something, I always recommend that you write a note to your future self, explaining the concept. This should be something you can read in 6-12 months (or years, eventually) when you need that mastery, but you've forgotten the details. You'll have trouble writing the note if you don't fully understand the material, so it's also a good self test. I have 100s pages of these types of notes, and I've found them immensely useful over the years.
+
+还有一个尴尬的事情是做完以前的final，同样的问题我竟然又错了...还是印象不深刻，以后错题要再做一遍…如果有空的话orz。
+
+### NYU
+
+去年总觉得这边cs哪里不对但又说不出来，一个是没有多少colloquium，这学期倒是发现了很多...一共大概去了10个，nlp, pl, os啥都有，就是听不懂只能蹭吃噌喝…回头又没时间（不想）看paper…感受各位phd/postdoc/prof都很会讲，整体都很有条理。第二点是没有cs氛围…就像看到reddit[这一条](https://www.reddit.com/r/nyu/comments/7zba30/the_cs_scene_at_nyu_cas/)。
+> Personally I’ve found a lot of the students to be intelligent, hard working people, but what I call “tech enthusiasts”. They like the idea of programming, they may even go to clubs like tech@nyu or BUGS (open source club), but they don’t spend the time to actually program. 
+
+不像某学校"空气中弥漫着代码的味道"。我觉得有很多原因吧，比如
+
+1.大家都不住在一起，不会像本科时候一起去学院俱乐部写代码什么的
+
+2.课程作业就很多了，谁有空自己写代码玩
+
+3.很多人学cs是为了会一些技术，把cs当作工具来完成自己的目的，而不是因为好奇心来学习。
+
+
+
+### 实习
+
+刚好两年没有工作了，感觉上学相当于花钱度假…确实对工作没有太大帮助但是很有趣，之前看到知乎帖子有美本申到了mcds问是去读书还是去azure工作，大家都说如果不转行就应该直接工作，读书的时间成本还是挺高的。
+
+到现在刚刚实习一周，没有太特别的感觉，第一天有点紧张很快就好了，同事都很professional，不像以前在创业公司大家天天闲聊。我五年前竟然还写过[实习感受1](https://greenmoon55.com/intern-at-dianping/)和[实习感受2](https://greenmoon55.com/intern-at-ctrip/)…这边实习感觉真心不错，办公环境好，开放，不加班，用我喜欢的技术还有很多挑战，代码质量虽然不够完美但是很不错了。除了没有免费的饭其他都很完美的样子，至少比之前去过的team都好...但是不知道为什么我不是很excited，可能是跟以前的技术栈比较像，所以我有一种第500天上班的感觉，并没有刚上班的新鲜感。如果去做点其他的东西会不会更有趣呢？比如cuda, ml, nlp, blockchain？可能学会之后也觉得无聊了…这要怎么办...我甚至都不知道自己为什么不是特别感兴趣…难道是刚放假没休息好？反正我不会觉得不喜欢...所以似乎还好？
