@@ -11,7 +11,10 @@ published: true
 如果只选一个来湾区的理由，那就是天气了。夏天每天都是晴天，二十来度不冷不热。中餐还是很全的，鲤鱼门早茶甚至比纽约的好吃，不过哪里都要排队，比纽约还可怕。。整个湾区感觉就像是一座座小镇连在一起，在buiding 20或者在去fremont的84号桥上看周围荒芜人烟的样子，和公司的高大上的楼形成了鲜明的对比，总觉得很奇幻。
 
 暂时住在foster city，公司提供的房子真的很不错，或许是人生第一次一个人住这么久，其实还挺舒服的。Foster city是个美丽的小城，周围步行就有快乐柠檬、火锅、大华、safeway，还有一个超级美的湖。虽然告别了半夜十二点下楼遛弯儿的纽约生活，这里天没黑的时候出门走走还是很安全的。有趣的是搜了在google和知乎搜foster city，最靠前的结果都是我司员工写的。。那我就把这两个链接放在这里吧。
-https://leonson.me/2018/12/foster-city-intro https://zhuanlan.zhihu.com/p/34935531
+
+https://leonson.me/2018/12/foster-city-intro
+
+https://zhuanlan.zhihu.com/p/34935531
 
 湾区出行还是很方便的，跟很多其他美国城市一样，高速非常发达，出门很快就能上高速，几乎去哪儿都在半小时以内。唯一的问题是堵车比较严重，刚好去公司这一段路完全没有HOV lane，班车只好堵着，还要停很多站。。每天两小时在路上比较影响生活质量。。
 
@@ -40,7 +43,7 @@ https://leonson.me/2018/12/foster-city-intro https://zhuanlan.zhihu.com/p/349355
 虽然都说我司的infra差，入职第二天大家做第一个教程，所有人都遇到了bug...我来说一些好的地方。
 
 ### Monorepo
-以前只听说Google只有一个repo，https://cacm.acm.org/magazines/2016/7/204032-why-google-stores-billions-of-lines-of-code-in-a-single-repository/fulltext，FB也差不多，这么搞其实有很多好处，比如内部依赖不需要版本控制，搜代码非常容易，缺点就是需要team管版本控制，dev机器都需要很强的配置，才能pull那么多代码。
+以前只听说[Google只有一个repo](https://cacm.acm.org/magazines/2016/7/204032-why-google-stores-billions-of-lines-of-code-in-a-single-repository/fulltext)，FB也差不多，这么搞其实有很多好处，比如内部依赖不需要版本控制，搜代码非常容易，缺点就是需要team管版本控制，dev机器都需要很强的配置，才能pull那么多代码。
 
 ### Task
 可能大家都很讨厌jira，内部task管理就是一个很简单的工具，用起来很爽
