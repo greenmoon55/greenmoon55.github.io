@@ -1,7 +1,7 @@
 permalink: /:title/
 title : Greenmoon55's Blog
 production_url : http://greenmooon55.com
-description: "Yet another Jekyll blog"
+description: "Greenmoon55's Blog"
 disqus_shortname: greenmoon55
 author :
   name : greenmoon55
