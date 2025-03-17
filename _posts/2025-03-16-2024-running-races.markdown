@@ -3,27 +3,59 @@ layout: post
 title: 2024我参加的跑步比赛
 published: true
 ---
-
 2024作为业余选手开始跑步，介绍下我参加的一些比赛。评分标准是★到★★★。
+| 名字 | 日期 | 爬升 | 规模 | 观众 | 风景 | Swag | 天气 |
+|-----------|------|------|----------|-------|----------|---------|------|
+| Rutgers Big Chill 5K | 12/09/2023 | ★ | ★ | ★ | ★ | - | ★★★ |
+| NYC AAPI 5K (Pier 62 on the Hudson River Greenway) | 05/12/2024 | - | ★ | ★ | ★★★ | - | ★★★ |
+| Ottawa 5k | 05/25/2024 | ★ | ★★★ | ★★★ | ★★★ | ★★ | ★★★ |
+| Toronto 10k | 06/15/2024 | ★ | ★★ | ★★ | ★★★ | ★★ | ★★★ |
+| White Meadow Lake Festival 5k | 07/21/2024 | ★★★ | ★ | ★ | ★★ | - | ★★★ |
+| NYCRUNS Manhattan Ice Cream Social 10K (Governors Island) | 08/03/2024 | ★ | ★★ | ★ | ★★★ | ★ | ★★ |
+| NYCRUNS Squirrel Stampede (Governors Island) | 09/08/2024 | ★ | ★★ | ★ | ★★★ | ★ | ★★★ |
+| South Nyack 10-Miler | 09/14/2024 | ★★ | ★ | ★ | ★★★ | ★ | ★★★ |
+| Montreal | 09/20/2024 | ★★ | ★★★ | ★★★ | ★★★ | ★ | ★★★ |
+| Newport | 09/28/2024 | ★ | ★★ | ★★ | ★★★ | ★ | ★★★ |
+| Monterey Bay Half Marathon | 11/10/2024 | ★★ | ★★★ | ★★ | ★★★★ | ★★ | ★★★ |
+| NYCRUNS Go Nuts For Donuts 10K (Governors Island) | 11/16/2024 | ★ | ★★ | ★ | ★★★ | ★ | ★★★ |
+| Philadelphia | 11/24/2024 | ★★ | ★★★ | ★★ | ★★ | ★★★ | ★ |
+| Westfield Turkey Trot * 5 MILE | 11/30/2024 | ★ | ★ | ★ | ★ | - | ★ |
+| NYCRUNS Cocoa Classic 5K & 10 Miler (Prospect Park) | 12/07/2024 | ★★ | ★★ | ★ | ★ | ★ | ★★★ |
+| NYCRUNS Big Apple Half Marathon (Central Park) | 12/14/2024 | ★★★ | ★★ | ★ | ★★ | ★ | ★ |
+| NYCRUNS Frozen Penguin 5K (Central Park) | 01/05/2025 | ★★ | ★★ | ★ | ★★ | ★ | ★ |
 
-| 名字 | 日期 | 爬升 | 规模 | 观众 | 风景 | Swag | 天气 | Notes |
-|-----------|------|------|----------|-------|----------|---------|------|---------|
-| Rutgers Big Chill 5K | December 9, 2023 | ★ | ★ | ★ | ★ | - | ★★★ | 每人要捐一个玩具 |
-| NYC AAPI 5K (Pier 62 on the Hudson River Greenway) | May 12, 2024 | - | ★ | ★ | ★★★ | - | ★★★ | 支持asian的迷你比赛，但是似乎没有中国人参加 |
-| Ottawa 5k | May 25, 2024 | ★ | ★★★ | ★★★ | ★★★ | ★★ | ★★★ | 风景好，很多人参加，5k10k在周六傍晚，半马全马在周日，奖牌好看 |
-| Toronto 10k | June 15, 2024 | ★ | ★★ | ★★ | ★★★ | ★★ | ★★★ | 湖边折返跑步风景好，去年第一场长距离，衣服不错 |
-| White Meadow Lake Festival 5k | July 21, 2024 | ★★★ | ★ | ★ | ★★ | - | ★★★ | "Toughest" 5K in NJ，好多坡，见到了小镇热情的人们，很多人互相认识，衣服居然有很low的广告 |
-| NYCRUNS Manhattan Ice Cream Social 10K (Governors Island) | August 3, 2024 | ★ | ★★ | ★ | ★★★ | ★ | ★★ | 太热了， Governors island 风景不错但无人观赛 |
-| NYCRUNS Squirrel Stampede (Governors Island) | September 8, 2024 | ★ | ★★ | ★ | ★★★ | ★ | ★★★ | 还是Governors Island |
-| South Nyack 10-Miler | September 14, 2024 | ★★ | ★ | ★ | ★★★ | ★ | ★★★ | 从镇上跑到河边，但是其实爬升不高，最后一小段抄了近路很尴尬，只好在终点前折返跑，非常少见的10Mile距离的比赛 |
-| Montreal | September 20, 2024 | ★★ | ★★★ | ★★★ | ★★★ | ★ | ★★★ | 第一场半马，跑过f1赛道，不错的比赛 |
-| Newport | September 28, 2024 | ★ | ★★ | ★★ | ★★★ | ★ | ★★★ | 家门口的半马，不热闹，可以从liberty state park看到曼哈顿 |
-| Monterey Bay Half Marathon | November 10, 2024 | ★★ | ★★★ | ★★ | ★★★★ | ★★ | ★★★ | 最喜欢的一场，在太平洋边跑了PB，木质奖牌很好看 |
-| NYCRUNS Go Nuts For Donuts 10K (Governors Island) | November 16, 2024 | ★ | ★★ | ★ | ★★★ | ★ | ★★★ | 还是Governors Island | 
-| Philadelphia | November 24, 2024 | ★★ | ★★★ | ★★ | ★★ | ★★★ | ★ | 太冷了，风景一般，不想再去。其实2023也去了，不过跑的是8k，衣服质量一般但是每次都有love run的抽奖，能拿个杯子lol |
-| Westfield Turkey Trot * 5 MILE | November 30, 2024 | ★ | ★ | ★ | ★ | - | ★ | 比较环保的比赛，给的是易拉罐的水，还有人执导垃圾分类 |
-| NYCRUNS Cocoa Classic 5K & 10 Miler (Prospect Park) | December 7, 2024 | ★★ | ★★ | ★ | ★ | ★ | ★★★ | Prospect park有点无聊，不如central park |                             
-| NYCRUNS Big Apple Half Marathon (Central Park) | December 14, 2024 | ★★★ | ★★ | ★ | ★★ | ★ | ★ | 太冷了，你喝过冻住的佳得乐吗？中央公园还是很棒的 |
-| NYCRUNS Frozen Penguin 5K (Central Park) | January 5th, 2025 | ★★ | ★★ | ★ | ★★ | ★ | ★ | 同上，还好是5k |
+**Rutgers Big Chill 5K (12/09/2023)**: 每人要捐一个玩具。
 
-我选比赛主要是看风景。。并不care规模，跑下来感觉都不错，不喜欢的大概只有费城。。主要是风景比较一般。2025我也没参加NYRR Brooklyn Half，因为要跑很长一段直路看起来很无聊。2025可能不会再去太冷或者太热的比赛。
+**NYC AAPI 5K (05/12/2024)**: 支持asian的迷你比赛，但是似乎没有中国人参加，就在hudson river。
+
+**Ottawa 5k (05/25/2024)**: 风景好，很多人参加，5k10k在周六傍晚，半马全马在周日，奖牌好看。ottawa比赛周末是个很有趣的小城，人山山海仿佛在纽约。
+
+**Toronto 10k (06/15/2024)**: 湖边折返跑步风景好，去年第一场长距离，衣服不错。
+
+**White Meadow Lake Festival 5k (07/21/2024)**: "Toughest" 5K in NJ，好多坡，见到了小镇热情的人们，很多人互相认识，衣服居然有很low的广告。
+
+**NYCRUNS Manhattan Ice Cream Social 10K (08/03/2024)**: 第一场Governors island，坐轮渡过去很有意思。
+
+**NYCRUNS Squirrel Stampede (09/08/2024)**: 太热了，Governors island 风景不错但无人观赛。
+
+**South Nyack 10-Miler (09/14/2024)**: 从镇上跑到河边，但是其实爬升不高，最后一小段抄了近路很尴尬，只好在终点前折返跑，非常少见的10Mile比赛。
+
+**Montreal (09/20/2024)**: 我的第一场半马，跑过f1赛道，观众很热闹，不错的比赛。
+
+**Newport (09/28/2024)**: 家门口的半马，除了终点吧并不热闹，看着曼哈顿跑过liberty state park。
+
+**Monterey Bay Half Marathon (11/10/2024)**: 最喜欢的一场，在太平洋边跑了PB，木质奖牌很好看。
+
+**NYCRUNS Go Nuts For Donuts 10K (11/16/2024)**: 还是Governors Island。
+
+**Philadelphia (11/24/2024)**: 太冷了，风景一般，不想再去。其实2023也去了，不过跑的是8k，衣服质量一般但是每次都有love run的抽奖，能拿个杯子lol。
+
+**Westfield Turkey Trot * 5 MILE (11/30/2024)**: 比较环保的比赛，给的是易拉罐的水，还有人执导垃圾分类。
+
+**NYCRUNS Cocoa Classic 5K & 10 Miler (12/07/2024)**: Prospect park有点无聊，不如central park。
+
+**NYCRUNS Big Apple Half Marathon (12/14/2024)**: 太冷了，"你喝过冻住的佳得乐吗"？中央公园还是很棒的。
+
+**NYCRUNS Frozen Penguin 5K (01/05/2025)**: 同上，还好是5k。
+
+我选比赛主要是看风景。。并不care规模，去年报名的跑下来感觉都不错，不喜欢的大概只有费城。。主要是风景比较一般。2025我也没参加NYRR Brooklyn Half，因为要跑很长一段直路看起来很无聊。2025可能不会再去太冷或者太热的比赛。
