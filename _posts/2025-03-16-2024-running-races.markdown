@@ -7,7 +7,7 @@ published: true
 
 | 名字 | 日期 | 爬升 | 规模 | 观众 | 风景 | Swag | 天气 |
 |-----------|------|------|----------|-------|----------|---------|------|
-| Rutgers Big Chill 5K | 12/09/2023 | ★ | ★ | ★ | ★ | - | ★★★ |
+| Rutgers Big Chill 5K | 12/09/2023 | ★ | ★ | ★ | ★ | - | ★★ |
 | NYC AAPI 5K (Pier 62 on the Hudson River Greenway) | 05/12/2024 | - | ★ | ★ | ★★★ | - | ★★★ |
 | Ottawa 5k | 05/25/2024 | ★ | ★★★ | ★★★ | ★★★ | ★★ | ★★★ |
 | Toronto 10k | 06/15/2024 | ★ | ★★ | ★★ | ★★★ | ★★ | ★★★ |
@@ -25,9 +25,9 @@ published: true
 | NYCRUNS Big Apple Half Marathon (Central Park) | 12/14/2024 | ★★★ | ★★ | ★ | ★★ | ★ | ★ |
 | NYCRUNS Frozen Penguin 5K (Central Park) | 01/05/2025 | ★★ | ★★ | ★ | ★★ | ★ | ★ |
 
-**Rutgers Big Chill 5K (12/09/2023)**: 每人要捐一个玩具。
+**Rutgers Big Chill 5K (12/09/2023)**: 领bib的时候每人要捐一个玩具给小朋友。
 
-**NYC AAPI 5K (05/12/2024)**: 支持asian的迷你比赛，但是似乎见到别的中国人参加。。就在hudson river。
+**NYC AAPI 5K (05/12/2024)**: 支持asian的迷你比赛，但是似乎没见到别的中国人参加。。就在hudson river。
 
 **Ottawa 5k (05/25/2024)**: 风景好，很多人参加，5k10k在周六傍晚，半马全马在周日，奖牌好看。ottawa比赛周末是个很有趣的小城，人山山海仿佛在纽约。
 
