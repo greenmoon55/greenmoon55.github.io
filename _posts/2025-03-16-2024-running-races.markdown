@@ -10,7 +10,7 @@ published: true
 | Rutgers Big Chill 5K | 12/09/2023 | ★ | ★ | ★ | ★ | - | ★★ |
 | NYC AAPI 5K (Pier 62 on the Hudson River Greenway) | 05/12/2024 | - | ★ | ★ | ★★★ | - | ★★★ |
 | Ottawa 5k | 05/25/2024 | ★ | ★★★ | ★★★ | ★★★ | ★★ | ★★★ |
-| Toronto 10k | 06/15/2024 | ★ | ★★ | ★★ | ★★★ | ★★ | ★★★ |
+| Toronto Waterfront 10k | 06/15/2024 | ★ | ★★ | ★★ | ★★★ | ★★ | ★★★ |
 | White Meadow Lake Festival 5k | 07/21/2024 | ★★★ | ★ | ★ | ★★ | - | ★★★ |
 | NYCRUNS Manhattan Ice Cream Social 10K (Governors Island) | 08/03/2024 | ★ | ★★ | ★ | ★★★ | ★ | ★★ |
 | NYCRUNS Squirrel Stampede (Governors Island) | 09/08/2024 | ★ | ★★ | ★ | ★★★ | ★ | ★★★ |
@@ -19,7 +19,7 @@ published: true
 | Newport | 09/28/2024 | ★ | ★★ | ★★ | ★★★ | ★ | ★★★ |
 | Monterey Bay Half Marathon | 11/10/2024 | ★★ | ★★★ | ★★ | ★★★★ | ★★ | ★★★ |
 | NYCRUNS Go Nuts For Donuts 10K (Governors Island) | 11/16/2024 | ★ | ★★ | ★ | ★★★ | ★ | ★★★ |
-| Philadelphia | 11/24/2024 | ★★ | ★★★ | ★★ | ★★ | ★★★ | ★ |
+| Philadelphia| 11/24/2024 | ★★ | ★★★ | ★★ | ★★ | ★★★ | ★ |
 | Westfield Turkey Trot 5 MILE | 11/30/2024 | ★ | ★ | ★ | ★ | ★ | ★★ |
 | NYCRUNS Cocoa Classic 5K & 10 Miler (Prospect Park) | 12/07/2024 | ★★ | ★★ | ★ | ★ | ★ | ★★ |
 | NYCRUNS Big Apple Half Marathon (Central Park) | 12/14/2024 | ★★★ | ★★ | ★ | ★★ | ★ | ★ |
